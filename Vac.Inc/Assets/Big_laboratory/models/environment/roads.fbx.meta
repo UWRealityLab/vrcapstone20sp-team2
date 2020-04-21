@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: fa05a130615643b46a236be36293d7ed
+timeCreated: 1568192231
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Road_1
+    100002: Road_2
+    100004: Road_3
+    100006: Road_5
+    100008: Road_6
+    100010: Road_7
+    100012: Road_8
+    100014: //RootNode
+    100016: Road_1.001
+    100018: Road_2.001
+    100020: Road_3.001
+    100022: Road_5.001
+    100024: Road_6.001
+    100026: Road_7.001
+    100028: Road_8.001
+    100030: Road_1_1
+    100032: Road_2_1
+    100034: Road_3_1
+    100036: Road_5_1
+    100038: Road_6_1
+    100040: Road_7_1
+    100042: Road_8_1
+    400000: Road_1
+    400002: Road_2
+    400004: Road_3
+    400006: Road_5
+    400008: Road_6
+    400010: Road_7
+    400012: Road_8
+    400014: //RootNode
+    400016: Road_1.001
+    400018: Road_2.001
+    400020: Road_3.001
+    400022: Road_5.001
+    400024: Road_6.001
+    400026: Road_7.001
+    400028: Road_8.001
+    400030: Road_1_1
+    400032: Road_2_1
+    400034: Road_3_1
+    400036: Road_5_1
+    400038: Road_6_1
+    400040: Road_7_1
+    400042: Road_8_1
+    2300000: Road_1
+    2300002: Road_2
+    2300004: Road_3
+    2300006: Road_5
+    2300008: Road_6
+    2300010: Road_7
+    2300012: Road_8
+    2300014: Road_1.001
+    2300016: Road_2.001
+    2300018: Road_3.001
+    2300020: Road_5.001
+    2300022: Road_6.001
+    2300024: Road_7.001
+    2300026: Road_8.001
+    2300028: Road_1_1
+    2300030: Road_2_1
+    2300032: Road_3_1
+    2300034: Road_5_1
+    2300036: Road_6_1
+    2300038: Road_7_1
+    2300040: Road_8_1
+    3300000: Road_1
+    3300002: Road_2
+    3300004: Road_3
+    3300006: Road_5
+    3300008: Road_6
+    3300010: Road_7
+    3300012: Road_8
+    3300014: Road_1.001
+    3300016: Road_2.001
+    3300018: Road_3.001
+    3300020: Road_5.001
+    3300022: Road_6.001
+    3300024: Road_7.001
+    3300026: Road_8.001
+    3300028: Road_1_1
+    3300030: Road_2_1
+    3300032: Road_3_1
+    3300034: Road_5_1
+    3300036: Road_6_1
+    3300038: Road_7_1
+    3300040: Road_8_1
+    4300000: Road_1
+    4300002: Road_2
+    4300004: Road_7
+    4300006: Road_6
+    4300008: Road_5
+    4300010: Road_3
+    4300012: Road_8
+    4300014: Road_8.001
+    4300016: Road_1.001
+    4300018: Road_2.001
+    4300020: Road_7.001
+    4300022: Road_6.001
+    4300024: Road_5.001
+    4300026: Road_3.001
+    4300028: Road_8_1
+    4300030: Road_1_1
+    4300032: Road_2_1
+    4300034: Road_7_1
+    4300036: Road_6_1
+    4300038: Road_5_1
+    4300040: Road_3_1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

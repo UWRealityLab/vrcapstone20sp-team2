@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: d7c66c1e1ac40c145b475e028228fa7e
+timeCreated: 1562053693
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: flask_10_low
+    100004: flask_11_low
+    100006: flask_12_low
+    100008: flask_13_low
+    100010: flask_14_low
+    100012: flask_15_low
+    100014: flask_16_low
+    100016: flask_17_low
+    100018: flask_18_low
+    100020: flask_19_low
+    100022: flask_1_low
+    100024: flask_20_low
+    100026: flask_21_low
+    100028: flask_22_low
+    100030: flask_23_low
+    100032: flask_24_low
+    100034: flask_25_low
+    100036: flask_26_low
+    100038: flask_27_low
+    100040: flask_28_low
+    100042: flask_2_low
+    100044: flask_5_low
+    100046: flask_6_low
+    100048: flask_7_low
+    100050: flask_8_low
+    100052: flask_9_low
+    100054: slask_3_low
+    100056: slask_4_low
+    400000: //RootNode
+    400002: flask_10_low
+    400004: flask_11_low
+    400006: flask_12_low
+    400008: flask_13_low
+    400010: flask_14_low
+    400012: flask_15_low
+    400014: flask_16_low
+    400016: flask_17_low
+    400018: flask_18_low
+    400020: flask_19_low
+    400022: flask_1_low
+    400024: flask_20_low
+    400026: flask_21_low
+    400028: flask_22_low
+    400030: flask_23_low
+    400032: flask_24_low
+    400034: flask_25_low
+    400036: flask_26_low
+    400038: flask_27_low
+    400040: flask_28_low
+    400042: flask_2_low
+    400044: flask_5_low
+    400046: flask_6_low
+    400048: flask_7_low
+    400050: flask_8_low
+    400052: flask_9_low
+    400054: slask_3_low
+    400056: slask_4_low
+    2300000: flask_10_low
+    2300002: flask_11_low
+    2300004: flask_12_low
+    2300006: flask_13_low
+    2300008: flask_14_low
+    2300010: flask_15_low
+    2300012: flask_16_low
+    2300014: flask_17_low
+    2300016: flask_18_low
+    2300018: flask_19_low
+    2300020: flask_1_low
+    2300022: flask_20_low
+    2300024: flask_21_low
+    2300026: flask_22_low
+    2300028: flask_23_low
+    2300030: flask_24_low
+    2300032: flask_25_low
+    2300034: flask_26_low
+    2300036: flask_27_low
+    2300038: flask_28_low
+    2300040: flask_2_low
+    2300042: flask_5_low
+    2300044: flask_6_low
+    2300046: flask_7_low
+    2300048: flask_8_low
+    2300050: flask_9_low
+    2300052: slask_3_low
+    2300054: slask_4_low
+    3300000: flask_10_low
+    3300002: flask_11_low
+    3300004: flask_12_low
+    3300006: flask_13_low
+    3300008: flask_14_low
+    3300010: flask_15_low
+    3300012: flask_16_low
+    3300014: flask_17_low
+    3300016: flask_18_low
+    3300018: flask_19_low
+    3300020: flask_1_low
+    3300022: flask_20_low
+    3300024: flask_21_low
+    3300026: flask_22_low
+    3300028: flask_23_low
+    3300030: flask_24_low
+    3300032: flask_25_low
+    3300034: flask_26_low
+    3300036: flask_27_low
+    3300038: flask_28_low
+    3300040: flask_2_low
+    3300042: flask_5_low
+    3300044: flask_6_low
+    3300046: flask_7_low
+    3300048: flask_8_low
+    3300050: flask_9_low
+    3300052: slask_3_low
+    3300054: slask_4_low
+    4300000: flask_28_low
+    4300002: flask_27_low
+    4300004: flask_26_low
+    4300006: flask_25_low
+    4300008: flask_24_low
+    4300010: flask_23_low
+    4300012: flask_22_low
+    4300014: flask_21_low
+    4300016: flask_20_low
+    4300018: flask_19_low
+    4300020: flask_18_low
+    4300022: flask_17_low
+    4300024: flask_16_low
+    4300026: flask_15_low
+    4300028: flask_14_low
+    4300030: flask_13_low
+    4300032: flask_12_low
+    4300034: flask_11_low
+    4300036: flask_10_low
+    4300038: flask_9_low
+    4300040: flask_8_low
+    4300042: flask_7_low
+    4300044: flask_6_low
+    4300046: flask_5_low
+    4300048: slask_4_low
+    4300050: slask_3_low
+    4300052: flask_2_low
+    4300054: flask_1_low
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
