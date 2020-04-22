@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2020-04-21T20:24:32.357-07:00
-  initializedAtString: 2020-04-21T20:24:32.357-07:00
+  lastUpdatedAtString: 2020-04-21T23:38:25.269-07:00
+  initializedAtString: 2020-04-21T23:38:25.269-07:00
   currentGitRemote:
     name: origin
     url: https://github.com/UWRealityLab/vrcapstone20sp-team2.git
