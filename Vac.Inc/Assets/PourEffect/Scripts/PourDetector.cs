@@ -6,6 +6,7 @@ public class PourDetector : MonoBehaviour
     public int pourThreshold = 45;
     public Transform origin = null;
     public GameObject streamPrefab = null;
+    public GameObject liquid;
 
     public bool isPouring = false;
     private Stream currentStream = null;
@@ -13,7 +14,7 @@ public class PourDetector : MonoBehaviour
     private void Update()
     {
         bool pourCheck = CalculatePourAngle() > pourThreshold;
-        if (isPouring != pourCheck) {
+        if (isPouring != pourCheck && liquid.activeSelf) {
             isPouring = pourCheck;
             if (isPouring) {
                 StartPour();

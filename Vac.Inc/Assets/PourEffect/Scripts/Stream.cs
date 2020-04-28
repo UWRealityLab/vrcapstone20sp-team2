@@ -9,6 +9,8 @@ public class Stream : MonoBehaviour
     private Coroutine pourRoutine = null;
     private Vector3 targetPosition = Vector3.zero;
 
+    private GameObject beaker = null;
+
     private void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
@@ -58,7 +60,18 @@ public class Stream : MonoBehaviour
         RaycastHit hit;
         Ray ray = new Ray(transform.position, Vector3.down);
         Physics.Raycast(ray, out hit, 2.0f);
-        Vector3 endPoint = hit.collider ? hit.point : ray.GetPoint(2.0f);
+        Vector3 endPoint;
+        if (hit.collider) {
+            endPoint = hit.point;
+            if (hit.collider.CompareTag("Beaker")) {
+                beaker = hit.collider.gameObject.GetComponent<PourDetector>().liquid;
+            } else {
+                beaker = null;
+            }
+        } else {
+            endPoint = ray.GetPoint(2.0f);
+            beaker = null;
+        }
         return endPoint;
     }
 
@@ -85,6 +98,9 @@ public class Stream : MonoBehaviour
         while (gameObject.activeSelf) {
             splashParticle.gameObject.transform.position = targetPosition;
             bool isHitting = HasReachedPosition(1, targetPosition);
+            if (isHitting && beaker != null) {
+                beaker.SetActive(true);
+            }
             splashParticle.gameObject.SetActive(isHitting);
             yield return null;
         }
