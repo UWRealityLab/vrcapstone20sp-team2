@@ -3042,6 +3042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15ac5f7c6a01ffb4f9e6271bf803a3db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverButton: {fileID: 1363334863}
 --- !u!4 &4418872937304189
 Transform:
   m_ObjectHideFlags: 0
