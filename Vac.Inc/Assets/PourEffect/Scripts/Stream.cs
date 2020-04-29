@@ -9,7 +9,7 @@ public class Stream : MonoBehaviour
     private Coroutine pourRoutine = null;
     private Vector3 targetPosition = Vector3.zero;
 
-    private GameObject beaker = null;
+    private PourDetector beaker = null;
 
     private void Awake()
     {
@@ -64,7 +64,7 @@ public class Stream : MonoBehaviour
         if (hit.collider) {
             endPoint = hit.point;
             if (hit.collider.CompareTag("Beaker")) {
-                beaker = hit.collider.gameObject.GetComponent<PourDetector>().liquid;
+                beaker = hit.collider.gameObject.GetComponent<PourDetector>();
             } else {
                 beaker = null;
             }
@@ -99,7 +99,8 @@ public class Stream : MonoBehaviour
             splashParticle.gameObject.transform.position = targetPosition;
             bool isHitting = HasReachedPosition(1, targetPosition);
             if (isHitting && beaker != null) {
-                beaker.SetActive(true);
+                beaker.liquid.SetActive(true);
+                beaker.IncreaseFill();
             }
             splashParticle.gameObject.SetActive(isHitting);
             yield return null;
