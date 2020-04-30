@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Stream
   - Beaker
+  - Ctube
   layers:
   - Default
   - TransparentFX
