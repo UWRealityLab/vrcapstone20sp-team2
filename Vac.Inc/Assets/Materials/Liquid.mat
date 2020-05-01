@@ -82,5 +82,5 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Tint: {r: 0.67325217, g: 1, b: 0.5801887, a: 1}
-    - _TopColor: {r: 0.6698872, g: 0.9528302, b: 0.14831792, a: 1}
+    - _Tint: {r: 0, g: 1, b: 0, a: 1}
+    - _TopColor: {r: 1, g: 1, b: 1, a: 1}

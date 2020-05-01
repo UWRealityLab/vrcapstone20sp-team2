@@ -10,6 +10,7 @@ public class Stream : MonoBehaviour
     private Vector3 targetPosition = Vector3.zero;
 
     private PourDetector beaker = null;
+    public Color liquidColor;
 
     private void Awake()
     {
@@ -99,8 +100,7 @@ public class Stream : MonoBehaviour
             splashParticle.gameObject.transform.position = targetPosition;
             bool isHitting = HasReachedPosition(1, targetPosition);
             if (isHitting && beaker != null) {
-                beaker.liquid.SetActive(true);
-                beaker.IncreaseFill();
+                beaker.IncreaseFill(liquidColor);
             }
             splashParticle.gameObject.SetActive(isHitting);
             yield return null;

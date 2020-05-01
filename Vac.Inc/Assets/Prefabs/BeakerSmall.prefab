@@ -669,5 +669,4 @@ MonoBehaviour:
   liquid: {fileID: 278333901041973159}
   minFill: 0.372
   maxFill: 0.5
-  defaultFill: 0.4
   liquidActive: 0
