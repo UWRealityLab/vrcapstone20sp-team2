@@ -48,7 +48,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8042724499268118246
 Transform:
   m_ObjectHideFlags: 0
@@ -667,4 +667,6 @@ MonoBehaviour:
   streamPrefab: {fileID: 5238570228697279498, guid: 687fe5b6c1388c34882009636030b3c7,
     type: 3}
   liquid: {fileID: 278333901041973159}
-  isPouring: 0
+  minFill: 0.372
+  maxFill: 0.5
+  liquidActive: 0
