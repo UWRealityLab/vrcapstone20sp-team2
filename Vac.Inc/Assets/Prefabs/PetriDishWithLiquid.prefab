@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1153265182241225911
 Transform:
   m_ObjectHideFlags: 0
@@ -387,9 +387,11 @@ MonoBehaviour:
   streamPrefab: {fileID: 5238570228697279498, guid: 687fe5b6c1388c34882009636030b3c7,
     type: 3}
   liquid: {fileID: 293565390193442319}
-  minFill: 0.47
-  maxFill: 0.51
+  fullFill: 0.372
+  emptyFill: 0.5
   liquidActive: 1
+  fixedBeaker: 0
+  liquidColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!114 &6358162482340477110
 MonoBehaviour:
   m_ObjectHideFlags: 0
