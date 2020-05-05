@@ -8,6 +8,7 @@ namespace Valve.VR.InteractionSystem
     {
         void OnHandHoverBegin(Hand hand)
         {
+            this.transform.SetParent(null);
             Rigidbody body = this.gameObject.GetComponent<Rigidbody>();
             body.isKinematic = false;
         }
