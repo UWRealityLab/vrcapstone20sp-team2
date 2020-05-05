@@ -9,8 +9,9 @@ public class PourDetector : MonoBehaviour
     public GameObject liquid;
     public float fullFill = 0.372f;
     public float emptyFill = 0.5f;
-    public bool liquidActive = false;
-    public bool fixedBeaker = false;
+    public float startingFill = 0.4f;
+    public bool startEmpty = false;
+    public bool liquidVolumeIsConstant = false;
     public Color liquidColor = new Color(0, 1.0f, 0, 1.0f);
 
 
@@ -24,13 +25,15 @@ public class PourDetector : MonoBehaviour
         liquid.SetActive(true);
         liquidMat = liquid.GetComponent<Renderer>().material;
         liquidMat.SetColor("_Tint", liquidColor);
-        if (!liquidActive) {
+        if (!startEmpty) {
             liquidMat.SetFloat("_FillAmount", emptyFill);
-        } else if (fixedBeaker) {
+        } else if (liquidVolumeIsConstant) {
             liquidMat.SetFloat("_FillAmount", fullFill);
+        } else {
+            liquidMat.SetFloat("_FillAmount", startingFill);
         }
-        liquid.SetActive(!liquidActive);
-        liquid.SetActive(liquidActive);
+        liquid.SetActive(!startEmpty);
+        liquid.SetActive(startEmpty);
         fill = liquidMat.GetFloat("_FillAmount");
     }
 
@@ -46,7 +49,7 @@ public class PourDetector : MonoBehaviour
             }
         }
 
-        if (!fixedBeaker && isPouring && liquid.activeSelf) {
+        if (!liquidVolumeIsConstant && isPouring && liquid.activeSelf) {
             if (fill < emptyFill) {
                 liquidMat.SetFloat("_FillAmount", fill + 0.001f);
                 fill += 0.001f;
@@ -72,7 +75,7 @@ public class PourDetector : MonoBehaviour
 
     public void IncreaseFill(Color other)
     {
-        if (fixedBeaker) {
+        if (liquidVolumeIsConstant) {
             return;
         }
         if (!liquid.activeSelf) {
@@ -104,7 +107,7 @@ public class PourDetector : MonoBehaviour
 
     public void HeatLiquid()
     {
-        if (fixedBeaker) {
+        if (liquidVolumeIsConstant) {
             return;
         }
         if (liquid.activeSelf) {

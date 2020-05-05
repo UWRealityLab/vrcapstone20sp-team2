@@ -412,6 +412,7 @@ GameObject:
   - component: {fileID: 4009301645859849402}
   - component: {fileID: 4009301645859849400}
   - component: {fileID: 4009301645859849401}
+  - component: {fileID: 6078771789605810574}
   m_Layer: 0
   m_Name: BurnerFlame
   m_TagString: Untagged
@@ -5281,6 +5282,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &6078771789605810574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4009301645859849403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65cc432f54b474c4e94a05743caf7837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &394138655279490997
 Rigidbody:
   m_ObjectHideFlags: 0
