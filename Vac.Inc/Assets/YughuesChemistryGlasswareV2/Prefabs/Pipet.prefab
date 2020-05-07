@@ -1,26 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &1173676788656755143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3595891080954988686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a68bddc208df9b74ab78330f48299083, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pourThreshold: 45
-  origin: {fileID: 0}
-  streamPrefab: {fileID: 0}
-  liquid: {fileID: 1738609002754431978}
-  fullFill: 0.1
-  emptyFill: 0.5
-  liquidActive: 1
-  fixedBeaker: 0
-  liquidColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1001 &987687743969801303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90,15 +69,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec14d2b76dc46454fa412ec534bf0ad8, type: 3}
---- !u!1 &1738609002754431978 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1554937487328735165, guid: ec14d2b76dc46454fa412ec534bf0ad8,
-    type: 3}
-  m_PrefabInstance: {fileID: 987687743969801303}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &3595891080954988686 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4347050233205816537, guid: ec14d2b76dc46454fa412ec534bf0ad8,
-    type: 3}
-  m_PrefabInstance: {fileID: 987687743969801303}
-  m_PrefabAsset: {fileID: 0}

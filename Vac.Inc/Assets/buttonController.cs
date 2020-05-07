@@ -1,9 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class PourDetector : MonoBehaviour
+namespace Valve.VR.InteractionSystem.Sample
 {
-    public int pourThreshold = 45;
+  public class buttonController : MonoBehaviour
+  {
     public Transform origin = null;
     public GameObject streamPrefab = null;
     public GameObject liquid;
@@ -17,8 +19,10 @@ public class PourDetector : MonoBehaviour
 
     private Material liquidMat;
     private float fill;
-    private bool isPouring = false;
     private Stream currentStream = null;
+
+    private PourDetector container = null;
+    private Material containerLiquid = null;
 
     private void Start()
     {
@@ -37,28 +41,51 @@ public class PourDetector : MonoBehaviour
         fill = liquidMat.GetFloat("_FillAmount");
     }
 
-    private void Update()
+    public void OnReleasePress(Hand hand)
     {
-        bool pourCheck = CalculatePourAngle() > pourThreshold;
-        if (isPouring != pourCheck) {
-            isPouring = pourCheck;
-            if (isPouring && liquid.activeSelf) {
-                StartPour();
-            } else if (liquid.activeSelf) {
-                EndPour();
-            }
-        }
+      if (liquid.activeSelf) {
+          StartPour();
+      }
+      if (!liquidVolumeIsConstant && liquid.activeSelf) {
+          if (fill < emptyFill) {
+              liquidMat.SetFloat("_FillAmount", fill + 0.001f);
+              fill += 0.001f;
+              if (fill >= emptyFill) {
+                  EndPour();
+                  liquid.SetActive(false);
+              }
+          }
+      }
+      EndPour();
+    }
 
-        if (!liquidVolumeIsConstant && isPouring && liquid.activeSelf) {
-            if (fill < emptyFill) {
-                liquidMat.SetFloat("_FillAmount", fill + 0.001f);
-                fill += 0.001f;
-                if (fill >= emptyFill) {
-                    EndPour();
-                    liquid.SetActive(false);
-                }
-            }
+    void OnTriggerEnter(Collider other) {
+      //get the target container's liquid information to the pipette
+      if(other.gameObject.tag == "Beaker") {
+          container = other.gameObject.GetComponent<PourDetector>();
+          containerLiquid = container.getLiquid();
+      }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+      container = null;
+      containerLiquid = null;
+    }
+
+    public void OnPumpPress(Hand hand)
+    {
+      //Debug.Log("ButtonPressed");
+      if(container != null) {
+        Debug.Log("beakerFound");
+        container.decreaseFill();
+        Debug.Log(containerLiquid.GetColor("_Tint"));
+        Debug.Log("decreased");
+        if(container.liquid.activeSelf) {
+          IncreaseFill(containerLiquid.GetColor("_Tint"));
+          Debug.Log("inceased");
         }
+      }
     }
 
     private void StartPour()
@@ -105,48 +132,11 @@ public class PourDetector : MonoBehaviour
         liquidMat.SetColor("_Tint", c);
     }
 
-    public void HeatLiquid()
-    {
-        if (liquidVolumeIsConstant) {
-            return;
-        }
-        if (liquid.activeSelf) {
-            Color c = liquidMat.GetColor("_Tint");
-            if (c.r < 1) {
-                c.r += 0.001f;
-            }
-            if (c.g > 0 && c.r > 0.997f) {
-                c.g -= 0.001f;
-            }
-            liquidMat.SetColor("_Tint", c);
-        }
-    }
-
-    public Material getLiquid() {
-      return liquidMat;
-    }
-
-    public void decreaseFill()
-    {
-      if(fill < emptyFill) {
-        liquidMat.SetFloat("_FillAmount", fill + 0.0008f);
-        fill += 0.0008f;
-      } else {
-          liquid.SetActive(false);
-      }
-      Debug.Log("beaker fill : " + fill);
-    }
-
-    private float CalculatePourAngle()
-    {
-        float f = Vector3.Angle(transform.up, Vector3.up);
-        return f;
-    }
-
     private Stream CreateStream()
     {
         GameObject streamObject = Instantiate(streamPrefab, origin.position, Quaternion.identity, transform);
         streamObject.GetComponent<Stream>().liquidColor = liquidMat.GetColor("_Tint");
         return streamObject.GetComponent<Stream>();
     }
+  }
 }
