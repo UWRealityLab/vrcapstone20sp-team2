@@ -588,9 +588,12 @@ MonoBehaviour:
   streamPrefab: {fileID: 5238570228697279498, guid: 687fe5b6c1388c34882009636030b3c7,
     type: 3}
   liquid: {fileID: 944621380235361654}
-  minFill: 0.09
-  maxFill: 0.51
-  liquidActive: 0
+  fullFill: 0.2
+  emptyFill: 0.51
+  startingFill: 0.4
+  dontStartEmpty: 0
+  liquidVolumeIsConstant: 0
+  liquidColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &4242798592112092700
 GameObject:
   m_ObjectHideFlags: 0
