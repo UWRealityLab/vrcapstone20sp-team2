@@ -129,8 +129,8 @@ public class PourDetector : MonoBehaviour
     public void decreaseFill()
     {
       if(fill < emptyFill) {
-        liquidMat.SetFloat("_FillAmount", fill + 0.0008f);
-        fill += 0.0008f;
+        liquidMat.SetFloat("_FillAmount", fill + 0.001f);
+        fill += 0.001f;
       } else {
           liquid.SetActive(false);
       }
