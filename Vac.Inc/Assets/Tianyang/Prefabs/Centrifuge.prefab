@@ -958,7 +958,7 @@ GameObject:
   - component: {fileID: 2296206836409860241}
   - component: {fileID: 2296206836409860242}
   m_Layer: 0
-  m_Name: centrifuge_1
+  m_Name: Centrifuge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -971,7 +971,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2296206836409860247}
-  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.70710677}
   m_LocalPosition: {x: -0.448, y: 0.50001895, z: -0.759}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
