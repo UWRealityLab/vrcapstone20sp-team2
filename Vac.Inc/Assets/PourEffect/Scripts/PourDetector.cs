@@ -10,7 +10,7 @@ public class PourDetector : MonoBehaviour
     public float fullFill = 0.372f;
     public float emptyFill = 0.5f;
     public float startingFill = 0.4f;
-    public bool startEmpty = false;
+    public bool dontStartEmpty = false;
     public bool liquidVolumeIsConstant = false;
     public Color liquidColor = new Color(0, 1.0f, 0, 1.0f);
 
@@ -25,15 +25,15 @@ public class PourDetector : MonoBehaviour
         liquid.SetActive(true);
         liquidMat = liquid.GetComponent<Renderer>().material;
         liquidMat.SetColor("_Tint", liquidColor);
-        if (!startEmpty) {
+        if (!dontStartEmpty) {
             liquidMat.SetFloat("_FillAmount", emptyFill);
         } else if (liquidVolumeIsConstant) {
             liquidMat.SetFloat("_FillAmount", fullFill);
         } else {
             liquidMat.SetFloat("_FillAmount", startingFill);
         }
-        liquid.SetActive(!startEmpty);
-        liquid.SetActive(startEmpty);
+        liquid.SetActive(!dontStartEmpty);
+        liquid.SetActive(dontStartEmpty);
         fill = liquidMat.GetFloat("_FillAmount");
     }
 
