@@ -6,20 +6,17 @@ namespace Valve.VR.InteractionSystem.Sample
 {
   public class releaseController : MonoBehaviour
   {
-    public int pourThreshold = 45;
     public Transform origin = null;
     public GameObject streamPrefab = null;
     public GameObject liquid;
-    public float fullFill = 0.372f;
+    public float fullFill = 0.1f;
     public float emptyFill = 0.5f;
     public bool liquidActive = false;
-    public bool fixedBeaker = false;
     public Color liquidColor = new Color(0, 1.0f, 0, 1.0f);
-
+    public bool fixedBeaker;
 
     private Material liquidMat;
     private float fill;
-    private bool isPouring = false;
     private Stream currentStream = null;
 
 
@@ -46,13 +43,11 @@ namespace Valve.VR.InteractionSystem.Sample
           StartPour();
       }
       if (!fixedBeaker && liquid.activeSelf) {
-          if (fill < emptyFill) {
-              liquidMat.SetFloat("_FillAmount", fill + 0.0005f);
-              fill += 0.0005f;
-              if (fill >= emptyFill) {
-                  EndPour();
-                  liquid.SetActive(false);
-              }
+          liquidMat.SetFloat("_FillAmount", fill + 0.001f);
+          fill += 0.001f;
+          if (fill >= emptyFill) {
+              EndPour();
+              liquid.SetActive(false);
           }
       }
       EndPour();
