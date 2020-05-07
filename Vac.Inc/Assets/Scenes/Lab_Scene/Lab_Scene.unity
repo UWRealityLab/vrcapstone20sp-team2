@@ -5434,6 +5434,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolumetricFlaskMedium
       objectReference: {fileID: 0}
+    - target: {fileID: 2110213873054483736, guid: f6cc1e973b38488459eb93861b6eb478,
+        type: 3}
+      propertyPath: m_TagString
+      value: Beaker
+      objectReference: {fileID: 0}
     - target: {fileID: 2110213873054552294, guid: f6cc1e973b38488459eb93861b6eb478,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11592,6 +11597,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2158074996647026190, guid: b56d8c9b560c9794f8a1ad45ef250856,
+        type: 3}
+      propertyPath: m_TagString
+      value: Beaker
+      objectReference: {fileID: 0}
     - target: {fileID: 2158074996647054170, guid: b56d8c9b560c9794f8a1ad45ef250856,
         type: 3}
       propertyPath: m_Name
@@ -15142,6 +15152,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7929846013041320657, guid: 11c069fec293e2445aa02cec66fa3c3b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Beaker
+      objectReference: {fileID: 0}
     - target: {fileID: 7929846013041554953, guid: 11c069fec293e2445aa02cec66fa3c3b,
         type: 3}
       propertyPath: m_Name
@@ -16515,6 +16530,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 987687743967558205, guid: ec14d2b76dc46454fa412ec534bf0ad8,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 987687743969639333, guid: ec14d2b76dc46454fa412ec534bf0ad8,
         type: 3}
       propertyPath: m_Name
@@ -16523,17 +16543,17 @@ PrefabInstance:
     - target: {fileID: 987687743969836837, guid: ec14d2b76dc46454fa412ec534bf0ad8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.258
+      value: -23.581
       objectReference: {fileID: 0}
     - target: {fileID: 987687743969836837, guid: ec14d2b76dc46454fa412ec534bf0ad8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.757
+      value: 6.755
       objectReference: {fileID: 0}
     - target: {fileID: 987687743969836837, guid: ec14d2b76dc46454fa412ec534bf0ad8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.9978416
+      value: -1.148
       objectReference: {fileID: 0}
     - target: {fileID: 987687743969836837, guid: ec14d2b76dc46454fa412ec534bf0ad8,
         type: 3}

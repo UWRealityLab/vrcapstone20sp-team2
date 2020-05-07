@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.vac.inc.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\kss\\Documents\\cse481v\\vrcapstone20sp-team2\\Vac.Inc\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "E:\\UnityProject\\Vac.Inc\\copy1\\vrcapstone20sp-team2\\Vac.Inc\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "Vac.Inc [Testing]"

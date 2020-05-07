@@ -77,13 +77,13 @@ namespace Valve.VR.InteractionSystem.Sample
     {
       //Debug.Log("ButtonPressed");
       if(container != null) {
-        Debug.Log("beakerFound");
+        //Debug.Log("beakerFound");
         container.decreaseFill();
         Debug.Log(containerLiquid.GetColor("_Tint"));
-        Debug.Log("decreased");
+        //Debug.Log("decreased");
         if(container.liquid.activeSelf) {
           IncreaseFill(containerLiquid.GetColor("_Tint"));
-          Debug.Log("inceased");
+          //Debug.Log("inceased");
         }
       }
     }
