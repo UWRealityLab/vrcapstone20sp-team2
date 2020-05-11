@@ -20,10 +20,18 @@ public class PourDetector : MonoBehaviour
     private bool isPouring = false;
     private Stream currentStream = null;
 
+    private void Awake()
+    {
+        if (liquid != null) {
+            liquid.SetActive(true);
+        }
+    }
+
     private void Start()
     {
-        liquid.SetActive(true);
+        //liquid.SetActive(true);
         liquidMat = liquid.GetComponent<Renderer>().material;
+        liquidMat.renderQueue = 3001;
         liquidMat.SetColor("_Tint", liquidColor);
         if (!dontStartEmpty) {
             liquidMat.SetFloat("_FillAmount", emptyFill);
