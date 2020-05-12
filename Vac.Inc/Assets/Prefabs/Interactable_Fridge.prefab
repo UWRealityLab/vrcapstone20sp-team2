@@ -316,6 +316,7 @@ GameObject:
   - component: {fileID: 7652509259057029130}
   - component: {fileID: 7665180758123938343}
   - component: {fileID: 7665180758123938344}
+  - component: {fileID: 5656417122756170001}
   m_Layer: 0
   m_Name: fridge_1_door
   m_TagString: Untagged
@@ -437,6 +438,20 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!64 &5656417122756170001
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7666728107841176602}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: c5412d592856bbc468054d62136af083, type: 3}
 --- !u!1 &7666764533575251166
 GameObject:
   m_ObjectHideFlags: 0
