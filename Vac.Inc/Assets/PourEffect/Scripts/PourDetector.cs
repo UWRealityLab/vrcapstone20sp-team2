@@ -29,7 +29,7 @@ public class PourDetector : MonoBehaviour
         }
 
         if (isPouring) {
-            liquid.decreaseFill();
+            liquid.DecreaseFill();
             if (liquid.IsEmpty()) {
                 EndPour();
             }
@@ -60,6 +60,7 @@ public class PourDetector : MonoBehaviour
     {
         GameObject streamObject = Instantiate(streamPrefab, origin.position, Quaternion.identity, transform);
         streamObject.GetComponent<Stream>().liquidColor = liquid.GetColor();
+        streamObject.GetComponent<Stream>().virus = liquid.ContainsVirus();
         return streamObject.GetComponent<Stream>();
     }
 }
