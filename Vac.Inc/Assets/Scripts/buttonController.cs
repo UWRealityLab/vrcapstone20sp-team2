@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Valve.VR.InteractionSystem;
 using UnityEngine;
 
 namespace Valve.VR.InteractionSystem.Sample
