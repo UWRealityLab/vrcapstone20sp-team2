@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6278048626097317805}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 14953403857964196}
   - component: {fileID: 2396065252284205182}
   - component: {fileID: 7851703985166637731}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 3246395988920455110}
   - component: {fileID: 3246395988921757612}
   - component: {fileID: 3246395988922363650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BeakerSmall_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 3246395988920432688}
   - component: {fileID: 3246395988921786544}
   - component: {fileID: 3246395988922852642}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BeakerSmall_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 3246395988920417562}
   - component: {fileID: 3246395988921770352}
   - component: {fileID: 3246395988922814770}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BeakerSmall_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 3246395988920444598}
   - component: {fileID: 3246395988921774566}
   - component: {fileID: 3246395988922374934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BeakerSmall_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,7 +456,8 @@ GameObject:
   - component: {fileID: 3246395988920507195}
   - component: {fileID: 3246395988920507192}
   - component: {fileID: 5461309011010661996}
-  m_Layer: 0
+  - component: {fileID: 7772357670930632443}
+  m_Layer: 8
   m_Name: BeakerSmall
   m_TagString: Beaker
   m_Icon: {fileID: 0}
@@ -666,10 +667,22 @@ MonoBehaviour:
   origin: {fileID: 6278048626097317805}
   streamPrefab: {fileID: 5238570228697279498, guid: 687fe5b6c1388c34882009636030b3c7,
     type: 3}
+--- !u!114 &7772357670930632443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3246395988920681208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05dc0b69cc4271044a037fc6cc7041c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   liquid: {fileID: 278333901041973159}
   fullFill: 0.372
   emptyFill: 0.5
   startingFill: 0.4
-  startEmpty: 0
+  startWithLiquid: 0
   liquidVolumeIsConstant: 0
   liquidColor: {r: 0, g: 1, b: 0, a: 1}

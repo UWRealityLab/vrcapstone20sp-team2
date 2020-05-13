@@ -20,7 +20,7 @@ namespace Valve.VR.InteractionSystem.Sample
     private float fill;
     private Stream currentStream = null;
 
-    private PourDetector container = null;
+    private LiquidFillManager container = null;
     private Material containerLiquid = null;
 
     private void Start()
@@ -76,7 +76,7 @@ namespace Valve.VR.InteractionSystem.Sample
     void OnTriggerEnter(Collider other) {
       //get the target container's liquid information to the pipette
       if(other.gameObject.tag == "Beaker") {
-          container = other.gameObject.GetComponent<PourDetector>();
+          container = other.gameObject.GetComponent<LiquidFillManager>();
           containerLiquid = container.getLiquid();
       }
     }

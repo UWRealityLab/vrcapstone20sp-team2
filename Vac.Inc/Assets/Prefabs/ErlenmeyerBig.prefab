@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 59802092490652046}
   - component: {fileID: 8472931615932178433}
   - component: {fileID: 1943141088708672215}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7025255274880106072}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 4242798592111833494}
   - component: {fileID: 4242798592113227584}
   - component: {fileID: 4242798592113831638}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ErlenmeyerBig_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 4242798592111910226}
   - component: {fileID: 4242798592113189662}
   - component: {fileID: 4242798592114253054}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ErlenmeyerBig_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 4242798592111825708}
   - component: {fileID: 4242798592113137770}
   - component: {fileID: 4242798592113819376}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ErlenmeyerBig_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,8 @@ GameObject:
   - component: {fileID: 4242798592111970078}
   - component: {fileID: 4242798592111970064}
   - component: {fileID: 3674404051204308137}
-  m_Layer: 0
+  - component: {fileID: 8386598227527121349}
+  m_Layer: 8
   m_Name: ErlenmeyerBig
   m_TagString: Beaker
   m_Icon: {fileID: 0}
@@ -587,11 +588,23 @@ MonoBehaviour:
   origin: {fileID: 7025255274880106072}
   streamPrefab: {fileID: 5238570228697279498, guid: 687fe5b6c1388c34882009636030b3c7,
     type: 3}
+--- !u!114 &8386598227527121349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4242798592112033184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05dc0b69cc4271044a037fc6cc7041c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   liquid: {fileID: 944621380235361654}
   fullFill: 0.2
   emptyFill: 0.51
   startingFill: 0.4
-  dontStartEmpty: 0
+  startWithLiquid: 0
   liquidVolumeIsConstant: 0
   liquidColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &4242798592112092700
@@ -605,7 +618,7 @@ GameObject:
   - component: {fileID: 4242798592111873564}
   - component: {fileID: 4242798592113173202}
   - component: {fileID: 4242798592113824406}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ErlenmeyerBig_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ public class Stream : MonoBehaviour
     private Coroutine pourRoutine = null;
     private Vector3 targetPosition = Vector3.zero;
 
-    private PourDetector beaker = null;
+    private LiquidFillManager beaker = null;
     public Color liquidColor;
 
     private void Awake()
@@ -65,7 +65,7 @@ public class Stream : MonoBehaviour
         if (hit.collider) {
             endPoint = hit.point;
             if (hit.collider.CompareTag("Beaker")) {
-                beaker = hit.collider.gameObject.GetComponent<PourDetector>();
+                beaker = hit.collider.gameObject.GetComponent<LiquidFillManager>();
             } else {
                 beaker = null;
             }

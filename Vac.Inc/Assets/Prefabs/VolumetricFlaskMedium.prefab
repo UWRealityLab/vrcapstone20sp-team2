@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2110213873054523080}
   - component: {fileID: 2110213873057451178}
   - component: {fileID: 2110213873056462544}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VolumetricFlaskMedium_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,8 @@ GameObject:
   - component: {fileID: 2110213871856492073}
   - component: {fileID: 2110213871856492072}
   - component: {fileID: 2958980143658866876}
-  m_Layer: 0
+  - component: {fileID: 3902791653527798999}
+  m_Layer: 8
   m_Name: VolumetricFlaskMedium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,10 +305,25 @@ MonoBehaviour:
   origin: {fileID: 449388066321409394}
   streamPrefab: {fileID: 5238570228697279498, guid: 687fe5b6c1388c34882009636030b3c7,
     type: 3}
+--- !u!114 &3902791653527798999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110213873054483736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05dc0b69cc4271044a037fc6cc7041c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   liquid: {fileID: 4920902423543649416}
-  minFill: 0.16
-  maxFill: 0.5
-  liquidActive: 0
+  fullFill: 0.372
+  emptyFill: 0.5
+  startingFill: 0.4
+  startWithLiquid: 0
+  liquidVolumeIsConstant: 0
+  liquidColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &2110213873054492340
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +335,7 @@ GameObject:
   - component: {fileID: 2110213873054515496}
   - component: {fileID: 2110213873057437862}
   - component: {fileID: 2110213873056417534}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VolumetricFlaskMedium_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +414,7 @@ GameObject:
   - component: {fileID: 2110213873054551498}
   - component: {fileID: 2110213873057415564}
   - component: {fileID: 2110213873056432846}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VolumetricFlaskMedium_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -477,7 +493,7 @@ GameObject:
   - component: {fileID: 2110213873054531892}
   - component: {fileID: 2110213873057439054}
   - component: {fileID: 2110213873056443182}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VolumetricFlaskMedium_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -556,7 +572,7 @@ GameObject:
   - component: {fileID: 4659983442644142680}
   - component: {fileID: 5669540208700982337}
   - component: {fileID: 2301071106434269461}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Liquid
   m_TagString: Beaker
   m_Icon: {fileID: 0}
@@ -633,7 +649,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 449388066321409394}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}

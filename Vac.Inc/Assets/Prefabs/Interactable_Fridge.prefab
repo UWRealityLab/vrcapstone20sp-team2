@@ -316,7 +316,6 @@ GameObject:
   - component: {fileID: 7652509259057029130}
   - component: {fileID: 7665180758123938343}
   - component: {fileID: 7665180758123938344}
-  - component: {fileID: 5656417122756170001}
   m_Layer: 0
   m_Name: fridge_1_door
   m_TagString: Untagged
@@ -438,20 +437,6 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!64 &5656417122756170001
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7666728107841176602}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: c5412d592856bbc468054d62136af083, type: 3}
 --- !u!1 &7666764533575251166
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +587,11 @@ PrefabInstance:
       propertyPath: dontStartEmpty
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1020407783228551147, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: startWithLiquid
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1481798752469689811, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -657,10 +647,65 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1481798752469984325, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1481798752469989353, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
         type: 3}
       propertyPath: m_Name
       value: ErlenmeyerSmall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481798752469989353, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481798752470014803, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481798752470024173, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481798752470036209, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800634076035888197, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: startWithLiquid
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800634076035888197, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: liquidVolumeIsConstant
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800634076035888197, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: liquidColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800634076035888197, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: liquidColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4997885836425060357, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869864327370046492, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d, type: 3}
@@ -700,6 +745,11 @@ PrefabInstance:
     - target: {fileID: 1020407783228551147, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
         type: 3}
       propertyPath: dontStartEmpty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020407783228551147, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: startWithLiquid
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1481798752469689811, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
@@ -757,10 +807,55 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1481798752469984325, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1481798752469989353, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
         type: 3}
       propertyPath: m_Name
       value: ErlenmeyerSmall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481798752469989353, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481798752470014803, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481798752470024173, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481798752470036209, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800634076035888197, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: startWithLiquid
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800634076035888197, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: liquidVolumeIsConstant
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4997885836425060357, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869864327370046492, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb0bf9c45e8b6544ba9cf38186f6d8d, type: 3}
