@@ -9,6 +9,7 @@ public class LiquidFillManager : MonoBehaviour
     public float startingFill = 0.4f;
     public bool startWithLiquid = false;
     public bool liquidVolumeIsConstant = false;
+    public bool contatinsVirus = false;
     public Color liquidColor = new Color(0, 1.0f, 0, 1.0f);
 
 
@@ -40,11 +41,12 @@ public class LiquidFillManager : MonoBehaviour
         fill = liquidMat.GetFloat("_FillAmount");
     }
 
-    public void IncreaseFill(Color other)
+    public void IncreaseFill(Color other, bool virus)
     {
         if (liquidVolumeIsConstant) {
             return;
         }
+        contatinsVirus |= virus;
         if (!liquid.activeSelf) {
             liquid.SetActive(true);
             liquidMat.SetColor("_Tint", other);
@@ -89,20 +91,26 @@ public class LiquidFillManager : MonoBehaviour
         }
     }
 
-    public Material getLiquid()
+    public Material GetLiquid()
     {
         return liquidMat;
     }
 
-    public void decreaseFill()
+    public void DecreaseFill()
     {
         if (!liquidVolumeIsConstant && liquid.activeSelf && fill < emptyFill) {
             liquidMat.SetFloat("_FillAmount", fill + 0.001f);
             fill += 0.001f;
             if (IsEmpty()) {
                 liquid.SetActive(false);
+                contatinsVirus = false;
             }
         }
+    }
+
+    public bool ContainsVirus()
+    {
+        return contatinsVirus;
     }
 
     public bool IsActive()

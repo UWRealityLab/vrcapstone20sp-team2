@@ -15,9 +15,9 @@ public class VT_controller : MonoBehaviour
     {
         if (machineCase.localRotation.x <= 0.01f && detectionArea.lastTube != null)
         {
-            float similarity = detectionArea.lastTube.similarity;
-            float reproducibility = detectionArea.lastTube.reproducibility;
-            float severity = detectionArea.lastTube.severity;
+            float similarity = detectionArea.similarity;
+            float reproducibility = detectionArea.reproducibility;
+            float severity = detectionArea.severity;
             float score = similarity + reproducibility + (1 - severity * 2);
             string newText = similarity + "\n" + reproducibility + "\n" + severity;
             Debug.Log(newText);
