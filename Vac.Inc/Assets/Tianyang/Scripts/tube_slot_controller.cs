@@ -7,6 +7,7 @@ public class tube_slot_controller : MonoBehaviour
 {
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(collision.gameObject);
         // The centrifuge only accepts tubes with tag "Ctube"
         if (collision.gameObject.tag == "Ctube" && this.transform.childCount <= 1)
         {

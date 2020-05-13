@@ -48,6 +48,7 @@ namespace Valve.VR.InteractionSystem.Sample
             dir = dir.normalized;
             Ray ray = new Ray(transform.position - dir * 0.5f, dir);
             Physics.Raycast(ray, out hit, 0.6f, 1 << 8);
+            Debug.Log(hit.collider + hit.collider.tag);
             if (hit.collider && hit.collider.CompareTag("Beaker")) {
                 container = hit.collider.gameObject.GetComponent<LiquidFillManager>();
                 containerLiquid = container.getLiquid();
