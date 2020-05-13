@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1481798752469759337}
   - component: {fileID: 1481798752471058985}
   - component: {fileID: 1481798752471712451}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ErlenmeyerSmall_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,8 @@ GameObject:
   - component: {fileID: 1481798752469902401}
   - component: {fileID: 1481798752469902403}
   - component: {fileID: 1020407783228551147}
-  m_Layer: 0
+  - component: {fileID: 1800634076035888197}
+  m_Layer: 8
   m_Name: ErlenmeyerSmall
   m_TagString: Beaker
   m_Icon: {fileID: 0}
@@ -304,11 +305,23 @@ MonoBehaviour:
   origin: {fileID: 4580642455968409323}
   streamPrefab: {fileID: 5238570228697279498, guid: 687fe5b6c1388c34882009636030b3c7,
     type: 3}
+--- !u!114 &1800634076035888197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481798752469989353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05dc0b69cc4271044a037fc6cc7041c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   liquid: {fileID: 8869864327370046492}
   fullFill: 0.372
   emptyFill: 0.51
   startingFill: 0.4
-  dontStartEmpty: 0
+  startWithLiquid: 0
   liquidVolumeIsConstant: 0
   liquidColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &1481798752470014803
@@ -322,7 +335,7 @@ GameObject:
   - component: {fileID: 1481798752469749261}
   - component: {fileID: 1481798752471030881}
   - component: {fileID: 1481798752471725871}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ErlenmeyerSmall_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +414,7 @@ GameObject:
   - component: {fileID: 1481798752469741335}
   - component: {fileID: 1481798752470994733}
   - component: {fileID: 1481798752472063281}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ErlenmeyerSmall_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -480,7 +493,7 @@ GameObject:
   - component: {fileID: 1481798752469723605}
   - component: {fileID: 1481798752470999249}
   - component: {fileID: 1481798752472018153}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ErlenmeyerSmall_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -557,7 +570,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4580642455968409323}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -590,7 +603,7 @@ GameObject:
   - component: {fileID: 7020471321072010581}
   - component: {fileID: 2950563847037501436}
   - component: {fileID: 446299945667477873}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}

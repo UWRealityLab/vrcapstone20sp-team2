@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2557981018451751727}
   - component: {fileID: 2557981018455206739}
   - component: {fileID: 2557981018454121307}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PetriDishCap_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 2557981018451814797}
   - component: {fileID: 2557981018455245535}
   - component: {fileID: 2557981018454154133}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PetriDishCap_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 2557981018451837853}
   - component: {fileID: 2557981018455269579}
   - component: {fileID: 2557981018454153595}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PetriDishCap_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 2557981018451826019}
   - component: {fileID: 2557981018438765231}
   - component: {fileID: 2557981018458405611}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PetriDishCap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 2557981018451744671}
   - component: {fileID: 2557981018455275039}
   - component: {fileID: 2557981018453787787}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PetriDishCap_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -20,7 +20,7 @@ public class Wobble : MonoBehaviour
     float time = 0.5f;
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         rend = GetComponent<Renderer>();
     }

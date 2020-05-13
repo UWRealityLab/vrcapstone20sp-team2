@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5793796107405407836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 3052453499994744990}
   - component: {fileID: 3052453499995502138}
   - component: {fileID: 3052453499996941532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GraduatedCylMedium_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 3052453499994720886}
   - component: {fileID: 3052453499995424464}
   - component: {fileID: 3052453499996932650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GraduatedCylMedium_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 3052453499994703222}
   - component: {fileID: 3052453499995449536}
   - component: {fileID: 3052453499996485516}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GraduatedCylMedium_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,8 @@ GameObject:
   - component: {fileID: 3052453499994592452}
   - component: {fileID: 3052453499994592454}
   - component: {fileID: 89922511438275944}
-  m_Layer: 0
+  - component: {fileID: 5450106784710816951}
+  m_Layer: 8
   m_Name: GraduatedCylMedium
   m_TagString: Beaker
   m_Icon: {fileID: 0}
@@ -492,10 +493,25 @@ MonoBehaviour:
   origin: {fileID: 5793796107405407836}
   streamPrefab: {fileID: 5238570228697279498, guid: 687fe5b6c1388c34882009636030b3c7,
     type: 3}
-  liquid: {fileID: 0}
-  minFill: 0.2
-  maxFill: 0.8
-  liquidActive: 0
+--- !u!114 &5450106784710816951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3052453499994551728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05dc0b69cc4271044a037fc6cc7041c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liquid: {fileID: 7028637940913547865}
+  fullFill: 0.372
+  emptyFill: 0.5
+  startingFill: 0.4
+  startWithLiquid: 0
+  liquidVolumeIsConstant: 0
+  liquidColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &3052453499994555686
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +523,7 @@ GameObject:
   - component: {fileID: 3052453499994639266}
   - component: {fileID: 3052453499995547452}
   - component: {fileID: 3052453499996528344}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GraduatedCylMedium_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,7 +603,7 @@ GameObject:
   - component: {fileID: 4764046965662551937}
   - component: {fileID: 9141298551856164796}
   - component: {fileID: 3010868143128159096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}

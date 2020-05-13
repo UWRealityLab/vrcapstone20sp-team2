@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4391149085109062404}
   - component: {fileID: 4929609294110790774}
   - component: {fileID: 6325843739983033739}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6958207738697998032}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 7279748176404515876}
   - component: {fileID: 7279748176403682698}
   - component: {fileID: 7279748176402288124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PetriDish_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 7279748176404544238}
   - component: {fileID: 7279748176403693480}
   - component: {fileID: 7279748176402615744}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PetriDish_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +298,8 @@ GameObject:
   - component: {fileID: 6358162482340477110}
   - component: {fileID: 7805989928563450308}
   - component: {fileID: 5842518200188797637}
-  m_Layer: 0
+  - component: {fileID: 8287924871891577056}
+  m_Layer: 8
   m_Name: PetriDishWithLiquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,13 +387,6 @@ MonoBehaviour:
   origin: {fileID: 6958207738697998032}
   streamPrefab: {fileID: 5238570228697279498, guid: 687fe5b6c1388c34882009636030b3c7,
     type: 3}
-  liquid: {fileID: 293565390193442319}
-  fullFill: 0.47
-  emptyFill: 0.5
-  startingFill: 0.47
-  startEmpty: 1
-  liquidVolumeIsConstant: 0
-  liquidColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!114 &6358162482340477110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,6 +509,25 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   interactable: {fileID: 0}
+--- !u!114 &8287924871891577056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7279748176404752410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05dc0b69cc4271044a037fc6cc7041c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liquid: {fileID: 293565390193442319}
+  fullFill: 0.47
+  emptyFill: 0.5
+  startingFill: 0.47
+  startWithLiquid: 0
+  liquidVolumeIsConstant: 0
+  liquidColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &7279748176404770182
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,7 +539,7 @@ GameObject:
   - component: {fileID: 7279748176404512526}
   - component: {fileID: 7279748176403701488}
   - component: {fileID: 7279748176402263462}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PetriDish_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +618,7 @@ GameObject:
   - component: {fileID: 7279748176404461394}
   - component: {fileID: 7279748176403666030}
   - component: {fileID: 7279748176402609992}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PetriDish_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

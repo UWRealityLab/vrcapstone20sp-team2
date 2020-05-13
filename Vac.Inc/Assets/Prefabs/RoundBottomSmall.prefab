@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7362560820807459339}
   - component: {fileID: 8720312213323772728}
   - component: {fileID: 4955777029630257969}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 37800682991134774}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 2158074996646822218}
   - component: {fileID: 2158074996650242080}
   - component: {fileID: 2158074996649169798}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoundBottomSmall_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 2158074996646758352}
   - component: {fileID: 2158074996650185832}
   - component: {fileID: 2158074996649209914}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoundBottomSmall_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +298,8 @@ GameObject:
   - component: {fileID: 2158074996647156637}
   - component: {fileID: 2158074996647156627}
   - component: {fileID: 4085299271622238972}
-  m_Layer: 0
+  - component: {fileID: 4875538677171460023}
+  m_Layer: 8
   m_Name: RoundBottomSmall
   m_TagString: Beaker
   m_Icon: {fileID: 0}
@@ -508,10 +509,25 @@ MonoBehaviour:
   origin: {fileID: 37800682991134774}
   streamPrefab: {fileID: 5238570228697279498, guid: 687fe5b6c1388c34882009636030b3c7,
     type: 3}
+--- !u!114 &4875538677171460023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2158074996647054170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05dc0b69cc4271044a037fc6cc7041c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   liquid: {fileID: 425365525778074049}
-  minFill: 0.23
-  maxFill: 0.5
-  liquidActive: 0
+  fullFill: 0.372
+  emptyFill: 0.5
+  startingFill: 0.4
+  startWithLiquid: 0
+  liquidVolumeIsConstant: 0
+  liquidColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &2158074996647063016
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,7 +539,7 @@ GameObject:
   - component: {fileID: 2158074996646861902}
   - component: {fileID: 2158074996650267350}
   - component: {fileID: 2158074996649021754}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoundBottomSmall_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -602,7 +618,7 @@ GameObject:
   - component: {fileID: 2158074996646767962}
   - component: {fileID: 2158074996650273298}
   - component: {fileID: 2158074996649174488}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoundBottomSmall_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
