@@ -364,7 +364,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a718a5a2e21b70944a273a0a14174a12, type: 2}
+  - {fileID: 2100000, guid: c251a9f2cfb220a4a8cdf50a774aa11e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -412,7 +412,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.04, z: 0.04}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -25.46003, y: 6.8872957, z: -3.6182106}
+  m_ConnectedAnchor: {x: -25.46003, y: 6.6890845, z: -3.5574212}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -497,7 +497,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a718a5a2e21b70944a273a0a14174a12, type: 2}
+  - {fileID: 2100000, guid: c251a9f2cfb220a4a8cdf50a774aa11e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
