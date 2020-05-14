@@ -6597,6 +6597,75 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300334, guid: c2c4f375440670f45af85442700b8416, type: 3}
+--- !u!1001 &790679624
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -23.551
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.724529
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.962
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378751, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_Name
+      value: virus_sample with liquid (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 121b1d04b7137354085cda1dfcc5bed5, type: 3}
 --- !u!1 &794571192 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1693263818077054, guid: f2acbb915fe7f434ab2b470fe161d3a3,
@@ -15359,6 +15428,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11c069fec293e2445aa02cec66fa3c3b, type: 3}
+--- !u!1001 &1652742369
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -23.551
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.724529
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.933
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378744, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 798820090713378751, guid: 121b1d04b7137354085cda1dfcc5bed5,
+        type: 3}
+      propertyPath: m_Name
+      value: virus_sample with liquid (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 121b1d04b7137354085cda1dfcc5bed5, type: 3}
 --- !u!1 &1654262898
 GameObject:
   m_ObjectHideFlags: 0
