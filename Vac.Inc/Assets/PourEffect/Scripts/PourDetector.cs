@@ -59,8 +59,7 @@ public class PourDetector : MonoBehaviour
     private Stream CreateStream()
     {
         GameObject streamObject = Instantiate(streamPrefab, origin.position, Quaternion.identity, transform);
-        streamObject.GetComponent<Stream>().liquidColor = liquid.GetColor();
-        streamObject.GetComponent<Stream>().virus = liquid.ContainsVirus();
+        streamObject.GetComponent<Stream>().sourceLiquid = this.liquid;
         return streamObject.GetComponent<Stream>();
     }
 }

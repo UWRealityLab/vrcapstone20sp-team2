@@ -50,6 +50,14 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/LiquidPump",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/default/in/LiquidRelease",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },

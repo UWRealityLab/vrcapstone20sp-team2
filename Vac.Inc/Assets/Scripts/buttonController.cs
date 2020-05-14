@@ -48,7 +48,7 @@ namespace Valve.VR.InteractionSystem.Sample
             dir = dir.normalized;
             Ray ray = new Ray(transform.position - dir * 0.5f, dir);
             Physics.Raycast(ray, out hit, 0.6f, 1 << 8);
-            if (hit.collider && (hit.collider.CompareTag("Beaker") || hit.collider.CompareTag("Ctube"))) {
+            if (hit.collider && hit.collider.CompareTag("Beaker")) {
                 container = hit.collider.gameObject.GetComponent<LiquidFillManager>();
                 containerLiquid = container.GetLiquid();
             } else {
@@ -63,7 +63,7 @@ namespace Valve.VR.InteractionSystem.Sample
                     liquidMat.SetFloat("_FillAmount", fill + 0.001f);
                     fill += 0.001f;
                     if (container != null) {
-                        container.IncreaseFill(liquidMat.GetColor("_Tint"), containsVirus);
+                        // container.IncreaseFill(liquidMat.GetColor("_Tint"), containsVirus);
                     }
                     if (fill >= emptyFill) {
                         liquid.SetActive(false);
