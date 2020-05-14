@@ -105,6 +105,22 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Boolean LiquidPump
+        {
+            get
+            {
+                return SteamVR_Actions.default_LiquidPump;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean LiquidRelease
+        {
+            get
+            {
+                return SteamVR_Actions.default_LiquidRelease;
+            }
+        }
+        
         public virtual SteamVR_Action_Vibration Haptic
         {
             get
