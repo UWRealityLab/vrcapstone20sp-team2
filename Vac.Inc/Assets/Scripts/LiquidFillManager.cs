@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class LiquidFillManager : MonoBehaviour
 {
@@ -9,9 +11,28 @@ public class LiquidFillManager : MonoBehaviour
     public float startingFill = 0.4f;
     public bool startWithLiquid = false;
     public bool liquidVolumeIsConstant = false;
-    public bool contatinsVirus = false;
+
     public Color liquidColor = new Color(0, 1.0f, 0, 1.0f);
 
+    // The information of the virus contained in the liquid.
+    public bool containsVirus = false;
+    public float virusSim = 0.0f;
+    public float virusRep = 0.0f;
+    public float virusSev = 0.0f;
+    // If the virus was put into any of the following:
+    // centrifuge, bunsen heater, petri dish,
+    // then it is considered as processed, which means
+    // it will not be further improved by any upcoming processes.
+    // 1f stands for fully processed; 0f stands for not processed.
+    private float virusProcessRate = 0.0f;
+
+    // Only liquid with embyros can be sent into the incubator.
+    // WIP
+    public bool containsEmbyro = false;
+
+    // Only liquid with chemical can be heated.
+    // WIP
+    public bool containsChemical = false;
 
     private Material liquidMat;
     private float fill;
@@ -25,7 +46,6 @@ public class LiquidFillManager : MonoBehaviour
 
     private void Start()
     {
-        //liquid.SetActive(true);
         liquidMat = liquid.GetComponent<Renderer>().material;
         liquidMat.renderQueue = 3001;
         liquidMat.SetColor("_Tint", liquidColor);
@@ -41,12 +61,23 @@ public class LiquidFillManager : MonoBehaviour
         fill = liquidMat.GetFloat("_FillAmount");
     }
 
-    public void IncreaseFill(Color other, bool virus)
+    // Increase the fill of this liquid, sourcing from the otherLiquid.
+    // Note that the virus will only be passed over if and only if one
+    // liquid contains virus. Otherwise, no virus is passed.
+    public void IncreaseFill(LiquidFillManager otherLiquid)
     {
+        Color other = otherLiquid.GetColor();
         if (liquidVolumeIsConstant) {
             return;
         }
-        contatinsVirus |= virus;
+        if (!this.containsVirus)
+        {
+            this.containsVirus = otherLiquid.containsVirus;
+            this.virusProcessRate = otherLiquid.virusProcessRate;
+            this.virusRep = otherLiquid.virusRep;
+            this.virusSev = otherLiquid.virusSev;
+            this.virusSim = otherLiquid.virusSim;
+        }
         if (!liquid.activeSelf) {
             liquid.SetActive(true);
             liquidMat.SetColor("_Tint", other);
@@ -74,6 +105,7 @@ public class LiquidFillManager : MonoBehaviour
         liquidMat.SetColor("_Tint", c);
     }
 
+    // Heat the liquid with the bunsen heater.
     public void HeatLiquid()
     {
         if (liquidVolumeIsConstant) {
@@ -89,6 +121,39 @@ public class LiquidFillManager : MonoBehaviour
             }
             liquidMat.SetColor("_Tint", c);
         }
+        if (virusProcessRate < 1.0f && containsVirus)
+        {
+            virusProcessRate += 0.005f;
+            // These params are subject to change.
+            virusSim -= 0.003f * Random.value;
+            virusSev -= 0.003f * Random.value;
+            virusRep -= 0.003f * Random.value;
+        }
+    }
+
+    // Spin the liquid in the centrifuge.
+    public void SpinLiquid()
+    {
+        if (virusProcessRate < 1.0f && containsVirus)
+        {
+            virusProcessRate += 0.005f;
+            // These params are subject to change.
+            virusSim -= 0.002f * Random.value;
+            virusSev -= 0.003f * Random.value;
+            virusRep -= 0.004f * Random.value;
+        }
+    }
+
+    public void IncubateLiquid()
+    {
+        if (virusProcessRate < 1.0f && containsEmbyro && containsVirus)
+        {
+            virusProcessRate += 0.005f;
+            // These params are subject to change.
+            virusSim -= 0.004f * Random.value;
+            virusSev -= 0.004f * Random.value;
+            virusRep -= 0.004f * Random.value;
+        }
     }
 
     public Material GetLiquid()
@@ -103,14 +168,15 @@ public class LiquidFillManager : MonoBehaviour
             fill += 0.001f;
             if (IsEmpty()) {
                 liquid.SetActive(false);
-                contatinsVirus = false;
+                this.containsVirus = false;
+                this.virusProcessRate = 0.0f;
             }
         }
     }
 
     public bool ContainsVirus()
     {
-        return contatinsVirus;
+        return containsVirus;
     }
 
     public bool IsActive()

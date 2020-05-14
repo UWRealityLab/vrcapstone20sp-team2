@@ -11,7 +11,7 @@ public class Stream : MonoBehaviour
 
     private LiquidFillManager beaker = null;
     public Color liquidColor;
-    public bool virus;
+    public LiquidFillManager sourceLiquid;
 
     private void Awake()
     {
@@ -101,7 +101,7 @@ public class Stream : MonoBehaviour
             splashParticle.gameObject.transform.position = targetPosition;
             bool isHitting = HasReachedPosition(1, targetPosition);
             if (isHitting && beaker != null) {
-                beaker.IncreaseFill(liquidColor, virus);
+                beaker.IncreaseFill(sourceLiquid);
             }
             splashParticle.gameObject.SetActive(isHitting);
             yield return null;
