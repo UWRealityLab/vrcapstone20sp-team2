@@ -35,6 +35,23 @@ namespace Valve.VR.InteractionSystem
             stopButton.onButtonDown.AddListener(StopButtonDown);
         }
 
+        void Update()
+        {
+            if (isRunning)
+            {
+                Transform slots = transform.Find("slots");
+                foreach (Transform slot in slots)
+                {
+                    if (slot.childCount > 0)
+                    {
+                        Transform tube = slot.GetChild(0);
+                        LiquidFillManager liquid = tube.Find("Liquid Holder").gameObject.GetComponent<LiquidFillManager>();
+                        liquid.SpinLiquid();
+                    }
+                }
+            }
+        }
+
         private void OnButtonDown(Hand hand)
         {
             if (!isRunning)

@@ -13,8 +13,6 @@ public class VT_tube_detect : MonoBehaviour
     {
         if (other.gameObject.tag == "Ctube")
         {
-            Debug.Log(other.gameObject);
-            Debug.Log(other.transform.Find("Liquid Holder").gameObject);
             liquid = other.transform.Find("Liquid Holder").gameObject.GetComponent<LiquidFillManager>();
             similarity = Mathf.Round(liquid.virusSim * 100.0f) / 100.0f;
             reproducibility = Mathf.Round(liquid.virusRep * 100.0f) / 100.0f;

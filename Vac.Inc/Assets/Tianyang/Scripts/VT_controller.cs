@@ -13,7 +13,7 @@ public class VT_controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (machineCase.localRotation.x <= 0.01f && detectionArea.liquid != null)
+        if (machineCase.localRotation.x <= 0.04f && detectionArea.liquid != null)
         {
             float similarity = detectionArea.similarity;
             float reproducibility = detectionArea.reproducibility;
