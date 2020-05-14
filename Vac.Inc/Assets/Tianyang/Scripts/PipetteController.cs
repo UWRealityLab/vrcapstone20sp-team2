@@ -24,10 +24,6 @@ public class PipetteController : MonoBehaviour
     {
         liquid = GetComponent<LiquidFillManager>();
 
-        Debug.Log(transform);
-        Debug.Log(transform.parent);
-        Debug.Log(transform.parent.gameObject);
-        Debug.Log(transform.parent.gameObject.GetComponent<Interactable>());
         interactable = transform.parent.gameObject.GetComponent<Interactable>();
     }
 
@@ -70,6 +66,7 @@ public class PipetteController : MonoBehaviour
 
     void ReleaseLiquid()
     {
+        // The liquidVolumeIsConstant will not work in the pipette.
         liquid.DecreaseFill();
         if (otherLiquid != null && !liquid.IsEmpty())
         {
