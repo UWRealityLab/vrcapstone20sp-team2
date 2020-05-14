@@ -63,7 +63,7 @@ namespace Valve.VR.InteractionSystem.Sample
                     liquidMat.SetFloat("_FillAmount", fill + 0.001f);
                     fill += 0.001f;
                     if (container != null) {
-                        container.IncreaseFill(liquidMat.GetColor("_Tint"), containsVirus);
+                        // container.IncreaseFill(liquidMat.GetColor("_Tint"), containsVirus);
                     }
                     if (fill >= emptyFill) {
                         liquid.SetActive(false);
