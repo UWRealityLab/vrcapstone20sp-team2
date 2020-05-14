@@ -27,7 +27,12 @@ public class LiquidFillManager : MonoBehaviour
     private float virusProcessRate = 0.0f;
 
     // Only liquid with embyros can be sent into the incubator.
+    // WIP
     public bool containsEmbyro = false;
+
+    // Only liquid with chemical can be heated.
+    // WIP
+    public bool containsChemical = false;
 
     private Material liquidMat;
     private float fill;
