@@ -1,18 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Valve.VR.InteractionSystem;
 using UnityEngine;
 
 namespace Valve.VR.InteractionSystem.Sample
 {
     public class buttonController : MonoBehaviour
     {
-        public Transform origin = null;
-        public GameObject streamPrefab = null;
         public GameObject liquid;
         public float fullFill = 0.372f;
         public float emptyFill = 0.5f;
         public float startingFill = 0.4f;
-        public bool startEmpty = false;
+        public bool startWithLiquid = false;
         public bool liquidVolumeIsConstant = false;
         public Color liquidColor = new Color(0, 1.0f, 0, 1.0f);
 
@@ -20,6 +19,7 @@ namespace Valve.VR.InteractionSystem.Sample
         private Material liquidMat;
         private float fill;
         private Stream currentStream = null;
+        private bool containsVirus = false;
 
         private LiquidFillManager container = null;
         private Material containerLiquid = null;
@@ -29,15 +29,15 @@ namespace Valve.VR.InteractionSystem.Sample
             liquid.SetActive(true);
             liquidMat = liquid.GetComponent<Renderer>().material;
             liquidMat.SetColor("_Tint", liquidColor);
-            if (!startEmpty) {
+            if (!startWithLiquid) {
                 liquidMat.SetFloat("_FillAmount", emptyFill);
             } else if (liquidVolumeIsConstant) {
                 liquidMat.SetFloat("_FillAmount", fullFill);
             } else {
                 liquidMat.SetFloat("_FillAmount", startingFill);
             }
-            liquid.SetActive(!startEmpty);
-            liquid.SetActive(startEmpty);
+            liquid.SetActive(!startWithLiquid);
+            liquid.SetActive(startWithLiquid);
             fill = liquidMat.GetFloat("_FillAmount");
         }
 
@@ -48,10 +48,9 @@ namespace Valve.VR.InteractionSystem.Sample
             dir = dir.normalized;
             Ray ray = new Ray(transform.position - dir * 0.5f, dir);
             Physics.Raycast(ray, out hit, 0.6f, 1 << 8);
-            Debug.Log(hit.collider + hit.collider.tag);
             if (hit.collider && hit.collider.CompareTag("Beaker")) {
                 container = hit.collider.gameObject.GetComponent<LiquidFillManager>();
-                containerLiquid = container.getLiquid();
+                containerLiquid = container.GetLiquid();
             } else {
                 container = null;
             }
@@ -64,10 +63,11 @@ namespace Valve.VR.InteractionSystem.Sample
                     liquidMat.SetFloat("_FillAmount", fill + 0.001f);
                     fill += 0.001f;
                     if (container != null) {
-                        container.IncreaseFill(liquidMat.GetColor("_Tint"));
+                        container.IncreaseFill(liquidMat.GetColor("_Tint"), containsVirus);
                     }
                     if (fill >= emptyFill) {
                         liquid.SetActive(false);
+                        containsVirus = false;
                     }
                 }
             }
@@ -76,16 +76,17 @@ namespace Valve.VR.InteractionSystem.Sample
         public void OnPumpPress(Hand hand)
         {
             if(container != null && !container.IsEmpty()) {
-                container.decreaseFill();
-                IncreaseFill(containerLiquid.GetColor("_Tint"));
+                container.DecreaseFill();
+                IncreaseFill(containerLiquid.GetColor("_Tint"), container.ContainsVirus());
             }
         }
 
-        public void IncreaseFill(Color other)
+        public void IncreaseFill(Color other, bool virus)
         {
             if (liquidVolumeIsConstant) {
                 return;
             }
+            containsVirus |= virus;
             if (!liquid.activeSelf) {
                 liquid.SetActive(true);
                 liquidMat.SetColor("_Tint", other);
@@ -111,13 +112,6 @@ namespace Valve.VR.InteractionSystem.Sample
                 c.b -= 0.005f;
             }
             liquidMat.SetColor("_Tint", c);
-        }
-
-        private Stream CreateStream()
-        {
-            GameObject streamObject = Instantiate(streamPrefab, origin.position, Quaternion.identity, transform);
-            streamObject.GetComponent<Stream>().liquidColor = liquidMat.GetColor("_Tint");
-            return streamObject.GetComponent<Stream>();
         }
     }
 }

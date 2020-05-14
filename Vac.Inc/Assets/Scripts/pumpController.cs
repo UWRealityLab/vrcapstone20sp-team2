@@ -77,7 +77,7 @@ namespace Valve.VR.InteractionSystem.Sample
       //get the target container's liquid information to the pipette
       if(other.gameObject.tag == "Beaker") {
           container = other.gameObject.GetComponent<LiquidFillManager>();
-          containerLiquid = container.getLiquid();
+          containerLiquid = container.GetLiquid();
       }
     }
 
@@ -92,7 +92,7 @@ namespace Valve.VR.InteractionSystem.Sample
       Debug.Log("ButtonPressed");
       if(container != null) {
         Debug.Log("beakerFound");
-        container.decreaseFill();
+        container.DecreaseFill();
         Debug.Log(containerLiquid.GetColor("_Tint"));
         Debug.Log("decreased");
         if(container.liquid.activeSelf) {
