@@ -19,6 +19,10 @@ public class LiquidFillManager : MonoBehaviour
     public float virusSim = 0.0f;
     public float virusRep = 0.0f;
     public float virusSev = 0.0f;
+
+    // Number of seconds this liquid has been heated
+    public float heatTime = 0.0f;
+
     // If the virus was put into any of the following:
     // centrifuge, bunsen heater, petri dish,
     // then it is considered as processed, which means
@@ -77,6 +81,7 @@ public class LiquidFillManager : MonoBehaviour
             this.virusRep = otherLiquid.virusRep;
             this.virusSev = otherLiquid.virusSev;
             this.virusSim = otherLiquid.virusSim;
+            this.heatTime = otherLiquid.heatTime;
         }
         if (!liquid.activeSelf) {
             liquid.SetActive(true);
@@ -103,6 +108,10 @@ public class LiquidFillManager : MonoBehaviour
             c.b -= 0.005f;
         }
         liquidMat.SetColor("_Tint", c);
+        if (containsVirus) {
+            virusRep = 1.0f - Mathf.Abs(c.b - 0.5f);
+            virusSim = 1.0f - Mathf.Abs(c.g - 0.25f);
+        }
     }
 
     // Heat the liquid with the bunsen heater.
@@ -121,13 +130,12 @@ public class LiquidFillManager : MonoBehaviour
             }
             liquidMat.SetColor("_Tint", c);
         }
-        if (virusProcessRate < 1.0f && containsVirus)
-        {
-            virusProcessRate += 0.005f;
-            // These params are subject to change.
-            virusSim -= 0.003f * Random.value;
-            virusSev -= 0.003f * Random.value;
-            virusRep -= 0.003f * Random.value;
+        if (heatTime < 29.0f) {
+            heatTime += Time.deltaTime;
+        }
+        if (containsVirus) {
+            float heat = heatTime < 15.0f ? heatTime : 30.0f - heatTime;
+            virusSev = heat / 30.0f;
         }
     }
 
@@ -170,6 +178,7 @@ public class LiquidFillManager : MonoBehaviour
                 liquid.SetActive(false);
                 this.containsVirus = false;
                 this.virusProcessRate = 0.0f;
+                this.heatTime = 0.0f;
             }
         }
     }
