@@ -23,6 +23,9 @@ public class LiquidFillManager : MonoBehaviour
     // Number of seconds this liquid has been heated
     public float heatTime = 0.0f;
 
+    // Number of seconds this liquid has been spinning
+    public float spinTime = 0.0f;
+
     // If the virus was put into any of the following:
     // centrifuge, bunsen heater, petri dish,
     // then it is considered as processed, which means
@@ -130,7 +133,7 @@ public class LiquidFillManager : MonoBehaviour
             }
             liquidMat.SetColor("_Tint", c);
         }
-        if (heatTime < 29.0f) {
+        if (heatTime < 29.5f) {
             heatTime += Time.deltaTime;
         }
         if (containsVirus) {
@@ -140,15 +143,32 @@ public class LiquidFillManager : MonoBehaviour
     }
 
     // Spin the liquid in the centrifuge.
-    public void SpinLiquid()
+    // tubeCount is the number of test tubes inserted in the centrifuge
+    // equalVolumes is true if all test tubes have the same volume
+    public void SpinLiquid(int tubeCount, bool equalVolumes)
     {
-        if (virusProcessRate < 1.0f && containsVirus)
+        if (virusProcessRate < 1.0f && containsVirus && heatTime == 0)
         {
-            virusProcessRate += 0.005f;
-            // These params are subject to change.
-            virusSim -= 0.002f * Random.value;
-            virusSev -= 0.003f * Random.value;
-            virusRep -= 0.004f * Random.value;
+            if (spinTime < 59.5f) {
+                spinTime += Time.deltaTime;
+            }
+            if (tubeCount == 5 && equalVolumes) {
+                virusSim = 24.32f * Mathf.Log(spinTime + 1);
+                virusSev = 1.0f / 36.0f * spinTime * spinTime;
+                virusRep = spinTime / 60.0f;
+            } else if (tubeCount == 5) {
+                virusSim = (24.32f * Mathf.Log(spinTime + 1)) / 2;
+                virusSev = (1.0f / 36.0f * spinTime * spinTime) / 2;
+                virusRep = (spinTime / 60.0f) / 2;
+            } else if (equalVolumes) {
+                virusSim = (24.32f * Mathf.Log(spinTime + 1)) / 4;
+                virusSev = (1.0f / 36.0f * spinTime * spinTime) / 4;
+                virusRep = (spinTime / 60.0f) / 4;
+            } else {
+                virusSim = (24.32f * Mathf.Log(spinTime + 1)) / 8;
+                virusSev = (1.0f / 36.0f * spinTime * spinTime) / 8;
+                virusRep = (spinTime / 60.0f) / 8;
+            }
         }
     }
 
@@ -182,7 +202,7 @@ public class LiquidFillManager : MonoBehaviour
             }
         }
     }
-
+    
     public bool ContainsVirus()
     {
         return containsVirus;
@@ -201,5 +221,10 @@ public class LiquidFillManager : MonoBehaviour
     public Color GetColor()
     {
         return liquidMat.GetColor("_Tint");
+    }
+
+    public float GetVolume()
+    {
+        return fill;
     }
 }
