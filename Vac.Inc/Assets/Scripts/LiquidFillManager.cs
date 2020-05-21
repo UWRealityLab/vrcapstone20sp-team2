@@ -25,7 +25,7 @@ public class LiquidFillManager : MonoBehaviour
 
     // Number of seconds this liquid has been spinning
     public float spinTime = 0.0f;
-
+    public float incubateTime = 0.0f;
     // If the virus was put into any of the following:
     // centrifuge, bunsen heater, petri dish,
     // then it is considered as processed, which means
@@ -177,14 +177,16 @@ public class LiquidFillManager : MonoBehaviour
 
     public void IncubateLiquid()
     {
-        if (virusProcessRate < 1.0f && containsEmbyro && containsVirus)
-        {
-            virusProcessRate += 0.005f;
-            // These params are subject to change.
-            virusSim -= 0.004f * Random.value;
-            virusSev -= 0.004f * Random.value;
-            virusRep -= 0.004f * Random.value;
-        }
+      if (virusProcessRate < 1.0f && containsVirus && heatTime == 0)
+      {
+          if (incubateTime < 59.5f) {
+              incubateTime += Time.deltaTime;
+          }
+          virusSim = (0.2432f * Mathf.Log(incubateTime + 1)) / 8;
+          virusSev = (1.0f / 3600.0f * incubateTime * incubateTime) / 8;
+          virusRep = (incubateTime / 60.0f) / 8;
+          RoundVirus();
+      }
     }
 
     private void RoundVirus()
@@ -215,7 +217,7 @@ public class LiquidFillManager : MonoBehaviour
             }
         }
     }
-    
+
     public bool ContainsVirus()
     {
         return containsVirus;
