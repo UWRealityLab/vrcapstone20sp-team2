@@ -3,31 +3,48 @@ using UnityEngine;
 
 public class PourDetector : MonoBehaviour
 {
-    public int pourThreshold = 45;
     public Transform origin = null;
     public GameObject streamPrefab = null;
 
     private bool isPouring = false;
     private Stream currentStream = null;
     private LiquidFillManager liquid;
+    private float fullFill;
+    private float emptyFill;
+    
 
     private void Start()
     {
         liquid = GetComponent<LiquidFillManager>();
+        fullFill = liquid.fullFill;
+        emptyFill = liquid.emptyFill;
     }
 
     private void Update()
     {
-        bool pourCheck = CalculatePourAngle() > pourThreshold;
+        IsPouring();
+        EmptiedOut();
+    }
+
+    private void IsPouring()
+    {
+        float pourAngle = CalculatePourAngle();
+        float pourThreshold = CalculatePourThreshold();
+        bool pourCheck = pourAngle > pourThreshold;
         if (isPouring != pourCheck) {
             isPouring = pourCheck;
             if (isPouring && liquid.IsActive()) {
+                Debug.Log("Angle: " + pourAngle);
+                Debug.Log("Threshold: " + pourThreshold);
                 StartPour();
             } else if (liquid.IsActive()) {
                 EndPour();
             }
         }
+    }
 
+    private void EmptiedOut()
+    {
         if (isPouring) {
             liquid.DecreaseFill();
             if (liquid.IsEmpty()) {
@@ -54,6 +71,13 @@ public class PourDetector : MonoBehaviour
     {
         float f = Vector3.Angle(transform.up, Vector3.up);
         return f;
+    }
+
+    private float CalculatePourThreshold()
+    {
+        float fill = liquid.GetVolume();
+        float percentEmpty = (fill - fullFill) / (emptyFill - fullFill);
+        return percentEmpty * 50 + 40;
     }
 
     private Stream CreateStream()
