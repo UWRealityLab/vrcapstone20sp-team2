@@ -57,15 +57,19 @@ public class LiquidFillManager : MonoBehaviour
         liquidMat.renderQueue = 3001;
         liquidMat.SetColor("_Tint", liquidColor);
         if (!startWithLiquid) {
-            liquidMat.SetFloat("_FillAmount", emptyFill);
+            fill = emptyFill;
+            // liquidMat.SetFloat("_FillAmount", emptyFill);
         } else if (liquidVolumeIsConstant) {
-            liquidMat.SetFloat("_FillAmount", fullFill);
+            fill = fullFill;
+            // liquidMat.SetFloat("_FillAmount", fullFill);
         } else {
-            liquidMat.SetFloat("_FillAmount", startingFill);
+            fill = startingFill;
+            // liquidMat.SetFloat("_FillAmount", startingFill);
         }
         liquid.SetActive(!startWithLiquid);
         liquid.SetActive(startWithLiquid);
-        fill = liquidMat.GetFloat("_FillAmount");
+        liquidMat.SetFloat("_FillAmount", fill);
+        // fill = liquidMat.GetFloat("_FillAmount");
     }
 
     // Increase the fill of this liquid, sourcing from the otherLiquid.

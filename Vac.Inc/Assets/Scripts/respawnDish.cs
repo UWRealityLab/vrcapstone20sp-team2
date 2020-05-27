@@ -29,7 +29,6 @@ using UnityEngine;
     {
       yield return new WaitForSeconds(1.0f);
       if(canRespawn) {
-        print(canRespawn);
         Instantiate(dishPrefab, origin, Quaternion.identity);
         canRespawn = false;
       }

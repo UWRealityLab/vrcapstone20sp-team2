@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -5,6 +6,8 @@ public class PourDetector : MonoBehaviour
 {
     public Transform origin = null;
     public GameObject streamPrefab = null;
+    // Set to false if this liquid cannot be poured out.
+    public bool pourable = true;
 
     private bool isPouring = false;
     private Stream currentStream = null;
@@ -75,9 +78,16 @@ public class PourDetector : MonoBehaviour
 
     private float CalculatePourThreshold()
     {
-        float fill = liquid.GetVolume();
-        float percentEmpty = (fill - fullFill) / (emptyFill - fullFill);
-        return percentEmpty * 50 + 40;
+        if (pourable)
+        {
+            float fill = liquid.GetVolume();
+            float percentEmpty = Math.Max(0.0f, (fill - fullFill)) / (emptyFill - fullFill);
+            return percentEmpty * 50 + 40;
+        } else
+        {
+            return 1000;
+        }
+
     }
 
     private Stream CreateStream()
