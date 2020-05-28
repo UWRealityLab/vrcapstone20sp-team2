@@ -77,14 +77,23 @@ public class LiquidFillManager : MonoBehaviour
         if (liquidVolumeIsConstant) {
             return;
         }
-        if (!this.containsVirus)
-        {
+        if (!this.containsVirus && this.heatTime > 0 && otherLiquid.containsVirus) {
+            this.containsVirus = true;
+        } else if (!this.containsVirus) {
             this.containsVirus = otherLiquid.containsVirus;
             this.virusProcessRate = otherLiquid.virusProcessRate;
             this.virusRep = otherLiquid.virusRep;
             this.virusSev = otherLiquid.virusSev;
             this.virusSim = otherLiquid.virusSim;
-            this.heatTime = otherLiquid.heatTime;
+        }
+        if (this.heatTime == 0 && this.spinTime == 0 && this.incubateTime == 0) {
+            if (otherLiquid.heatTime > 0) {
+                this.heatTime = otherLiquid.heatTime;
+            } else if (otherLiquid.spinTime > 0) {
+                this.spinTime = otherLiquid.spinTime;
+            } else if (otherLiquid.incubateTime > 0) {
+                this.incubateTime = otherLiquid.incubateTime;
+            }
         }
         if (!liquid.activeSelf) {
             liquid.SetActive(true);
@@ -111,13 +120,9 @@ public class LiquidFillManager : MonoBehaviour
             c.b -= 0.005f;
         }
         liquidMat.SetColor("_Tint", c);
-        if (containsVirus && spinTime == 0) {
-            virusRep = 1.0f - Mathf.Abs(c.b - 0.5f);
-            virusSim = 1.0f - Mathf.Abs(c.g - 0.25f);
-            RoundVirus();
-        }
     }
-
+    //.4 g .6 b
+    // 1 r .25 g .6 b
     // Heat the liquid with the bunsen heater.
     public void HeatLiquid()
     {
@@ -126,20 +131,27 @@ public class LiquidFillManager : MonoBehaviour
         }
         if (liquid.activeSelf) {
             Color c = liquidMat.GetColor("_Tint");
-            if (c.r < 1) {
-                c.r += 0.001f;
+            if (c.r + 0.0005f < 1) {
+                c.r += 0.0005f;
             }
-            if (c.g > 0 && c.r > 0.997f) {
-                c.g -= 0.001f;
+            if (c.g - 0.0005f > 0 && c.r > 0.997f) {
+                c.g -= 0.0005f;
             }
             liquidMat.SetColor("_Tint", c);
         }
-        if (heatTime < 29.5f) {
-            heatTime += Time.deltaTime;
-        }
-        if (containsVirus) {
-            float heat = heatTime < 15.0f ? heatTime : 30.0f - heatTime;
-            virusSev = heat / 30.0f;
+        if (spinTime == 0 && incubateTime == 0) {
+            bool overheat = false;
+            if (heatTime < 60.0f) {
+                heatTime += Time.deltaTime;
+            } else {
+                overheat = true;
+            }
+            Color c = liquidMat.GetColor("_Tint");
+            float gPercentDiff = Mathf.Abs(c.g - 0.25f) / ((c.g + 0.25f) / 2);
+            float bPercentDiff = Mathf.Abs(c.b - 0.6f) / ((c.b + 0.6f) / 2);
+            virusSev = overheat ? 0 : 1.0f / 30.0f * Mathf.Abs(heatTime - 30.0f);
+            virusRep = overheat ? 0 : 1.0f - bPercentDiff / 2;
+            virusSim = overheat ? 0 : 1.0f - gPercentDiff / 2;
             RoundVirus();
         }
     }
@@ -149,26 +161,26 @@ public class LiquidFillManager : MonoBehaviour
     // equalVolumes is true if all test tubes have the same volume
     public void SpinLiquid(int tubeCount, bool equalVolumes)
     {
-        if (virusProcessRate < 1.0f && containsVirus && heatTime == 0)
+        if (virusProcessRate < 1.0f && containsVirus && heatTime == 0 && incubateTime == 0)
         {
             if (spinTime < 59.5f) {
                 spinTime += Time.deltaTime;
             }
             if (tubeCount == 5 && equalVolumes) {
                 virusSim = 0.2432f * Mathf.Log(spinTime + 1);
-                virusSev = 1.0f / 3600.0f * spinTime * spinTime;
+                virusSev = -1.0f / 3600.0f * spinTime * spinTime + 1;
                 virusRep = spinTime / 60.0f;
             } else if (tubeCount == 5) {
                 virusSim = (0.2432f * Mathf.Log(spinTime + 1)) / 2;
-                virusSev = (1.0f / 3600.0f * spinTime * spinTime) / 2;
+                virusSev = (-1.0f / 3600.0f * spinTime * spinTime + 1) / 2;
                 virusRep = (spinTime / 60.0f) / 2;
             } else if (equalVolumes) {
                 virusSim = (0.2432f * Mathf.Log(spinTime + 1)) / 4;
-                virusSev = (1.0f / 3600.0f * spinTime * spinTime) / 4;
+                virusSev = (-1.0f / 3600.0f * spinTime * spinTime + 1) / 4;
                 virusRep = (spinTime / 60.0f) / 4;
             } else {
                 virusSim = (0.2432f * Mathf.Log(spinTime + 1)) / 8;
-                virusSev = (1.0f / 3600.0f * spinTime * spinTime) / 8;
+                virusSev = (-1.0f / 3600.0f * spinTime * spinTime + 1) / 8;
                 virusRep = (spinTime / 60.0f) / 8;
             }
             RoundVirus();
@@ -177,13 +189,13 @@ public class LiquidFillManager : MonoBehaviour
 
     public void IncubateLiquid()
     {
-      if (virusProcessRate < 1.0f && containsVirus && heatTime == 0)
+      if (virusProcessRate < 1.0f && containsVirus && heatTime == 0 && spinTime == 0)
       {
           if (incubateTime < 59.5f) {
               incubateTime += Time.deltaTime;
           }
           virusSim = (0.2432f * Mathf.Log(incubateTime + 1)) / 8;
-          virusSev = (1.0f / 3600.0f * incubateTime * incubateTime) / 8;
+          virusSev = (-1.0f / 3600.0f * incubateTime * incubateTime + 1) / 8;
           virusRep = (incubateTime / 60.0f) / 8;
           RoundVirus();
       }
