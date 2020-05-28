@@ -209,7 +209,7 @@
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/default/in/liquidpump"
+                     "output" : "/actions/default/in/closehelpermode"
                   }
                },
                "mode" : "button",
@@ -281,7 +281,7 @@
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/default/in/liquidpump"
+                     "output" : "/actions/default/in/closehelpermode"
                   }
                },
                "mode" : "button",
@@ -290,7 +290,7 @@
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/default/in/liquidrelease"
+                     "output" : "/actions/default/in/openhelpermode"
                   }
                },
                "mode" : "button",
@@ -299,7 +299,7 @@
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/default/in/liquidrelease"
+                     "output" : "/actions/default/in/openhelpermode"
                   }
                },
                "mode" : "button",

@@ -58,6 +58,14 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/OpenHelperMode",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/default/in/CloseHelperMode",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },

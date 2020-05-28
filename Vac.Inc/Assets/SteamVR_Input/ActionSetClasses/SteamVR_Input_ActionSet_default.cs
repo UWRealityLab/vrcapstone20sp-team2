@@ -121,6 +121,22 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Boolean OpenHelperMode
+        {
+            get
+            {
+                return SteamVR_Actions.default_OpenHelperMode;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean CloseHelperMode
+        {
+            get
+            {
+                return SteamVR_Actions.default_CloseHelperMode;
+            }
+        }
+        
         public virtual SteamVR_Action_Vibration Haptic
         {
             get
