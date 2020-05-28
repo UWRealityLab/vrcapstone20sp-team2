@@ -134,9 +134,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8113774738379739343}
-  - component: {fileID: 8113774738379739340}
-  - component: {fileID: 8113774738379739341}
   - component: {fileID: 8113774738379739342}
+  - component: {fileID: 8113774738379739341}
   m_Layer: 8
   m_Name: Liquid Holder
   m_TagString: Beaker
@@ -160,36 +159,6 @@ Transform:
   m_Father: {fileID: 8113774739228204492}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8113774738379739340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8113774738379739336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a0813991d784af499cdd6ccd3aac477, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pourThreshold: 500
-  origin: {fileID: 8113774737573191724}
-  streamPrefab: {fileID: 5238570228697279498, guid: 687fe5b6c1388c34882009636030b3c7,
-    type: 3}
---- !u!136 &8113774738379739341
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8113774738379739336}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.01
-  m_Height: 0.04
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.03, z: 0}
 --- !u!114 &8113774738379739342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,8 +182,25 @@ MonoBehaviour:
   virusSim: 0
   virusRep: 0
   virusSev: 0
+  heatTime: 0
+  spinTime: 0
+  incubateTime: 0
   containsEmbyro: 0
   containsChemical: 0
+--- !u!136 &8113774738379739341
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8113774738379739336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.01
+  m_Height: 0.04
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.03, z: 0}
 --- !u!1 &8113774738444682972
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +311,7 @@ GameObject:
   - component: {fileID: 8113774739228204488}
   - component: {fileID: 8113774739228204490}
   m_Layer: 8
-  m_Name: virus_sample with liquid (7)
+  m_Name: empty tube
   m_TagString: Ctube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -339,7 +325,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8113774739228204491}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.255833, y: 6.724529, z: -2.2820606}
+  m_LocalPosition: {x: -25.905136, y: 6.8816924, z: 2.2380748}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8113774738379739343}

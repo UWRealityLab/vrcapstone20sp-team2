@@ -4,7 +4,12 @@ using UnityEngine;
 
   public class respawnDish : MonoBehaviour
   {
+    // The object to clone after it is being picked up.
     public GameObject dishPrefab = null;
+    // The initial rotation of the new clone.
+    // (0, 0, 0, 1) to be default.
+    public Quaternion spawnQuaternion = Quaternion.identity;
+
     private bool canRespawn = false;
     private Vector3 origin;
     // Start is called before the first frame update
@@ -29,8 +34,7 @@ using UnityEngine;
     {
       yield return new WaitForSeconds(1.0f);
       if(canRespawn) {
-        print(canRespawn);
-        Instantiate(dishPrefab, origin, Quaternion.identity);
+        Instantiate(dishPrefab, origin, spawnQuaternion);
         canRespawn = false;
       }
     }
