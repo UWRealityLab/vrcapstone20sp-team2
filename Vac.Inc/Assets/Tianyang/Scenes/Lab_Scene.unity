@@ -9160,6 +9160,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Centrifuge
       objectReference: {fileID: 0}
+    - target: {fileID: 3580468052470545747, guid: 71f424ce2e8261a4881f5ff7848e623e,
+        type: 3}
+      propertyPath: actionOpen.actionPath
+      value: /actions/default/in/OpenHelperMode
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580468052470545747, guid: 71f424ce2e8261a4881f5ff7848e623e,
+        type: 3}
+      propertyPath: actionClose.actionPath
+      value: /actions/default/in/CloseHelperMode
+      objectReference: {fileID: 0}
     - target: {fileID: 5835227739547475225, guid: 71f424ce2e8261a4881f5ff7848e623e,
         type: 3}
       propertyPath: m_RootOrder

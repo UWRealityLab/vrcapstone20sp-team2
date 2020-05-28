@@ -334,10 +334,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   origin: {fileID: 1747020907845424625}
   actionPump:
-    actionPath: /actions/default/in/LiquidPump
+    actionPath: /actions/buggy/in/LiquidPump
     needsReinit: 0
   actionRelease:
-    actionPath: /actions/default/in/LiquidRelease
+    actionPath: /actions/buggy/in/LiquidRelease
     needsReinit: 0
 --- !u!114 &1747020906639541297
 MonoBehaviour:
@@ -362,7 +362,11 @@ MonoBehaviour:
   virusSim: 0
   virusRep: 0
   virusSev: 0
+  heatTime: 0
+  spinTime: 0
+  incubateTime: 0
   containsEmbyro: 0
+  containsChemical: 0
 --- !u!1 &1747020907082648512
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,7 +894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateActionSetOnAttach:
-    actionSetPath: 
+    actionSetPath: /actions/buggy
   hideHandOnAttach: 1
   hideSkeletonOnAttach: 0
   hideControllerOnAttach: 0

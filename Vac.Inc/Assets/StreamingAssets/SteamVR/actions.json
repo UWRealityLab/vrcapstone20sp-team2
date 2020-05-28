@@ -94,6 +94,22 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/buggy/in/OpenHelperMode",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/buggy/in/CloseHelperMode",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/buggy/in/LiquidPump",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/buggy/in/LiquidRelease",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/mixedreality/in/ExternalCamera",
       "type": "pose",
       "requirement": "optional"

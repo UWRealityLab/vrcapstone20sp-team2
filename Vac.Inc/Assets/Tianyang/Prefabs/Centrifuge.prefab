@@ -1196,10 +1196,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1887111496887163238}
   actionOpen:
-    actionPath: /actions/default/in/OpenHelperMode
+    actionPath: /actions/buggy/in/OpenHelperMode
     needsReinit: 0
   actionClose:
-    actionPath: /actions/default/in/CloseHelperMode
+    actionPath: /actions/buggy/in/CloseHelperMode
     needsReinit: 0
 --- !u!1 &2296301602824656887
 GameObject:

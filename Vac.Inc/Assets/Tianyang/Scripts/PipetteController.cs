@@ -14,9 +14,9 @@ public class PipetteController : MonoBehaviour
 
     private Interactable interactable;
 
-    public SteamVR_Action_Boolean actionPump = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("default", "LiquidPump");
+    public SteamVR_Action_Boolean actionPump = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("buggy", "LiquidPump");
 
-    public SteamVR_Action_Boolean actionRelease = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("default", "LiquidRelease");
+    public SteamVR_Action_Boolean actionRelease = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("buggy", "LiquidRelease");
 
 
     // Start is called before the first frame update

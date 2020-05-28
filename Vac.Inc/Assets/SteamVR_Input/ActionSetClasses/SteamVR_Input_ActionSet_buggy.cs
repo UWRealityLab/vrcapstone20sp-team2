@@ -48,5 +48,37 @@ namespace Valve.VR
                 return SteamVR_Actions.buggy_Reset;
             }
         }
+        
+        public virtual SteamVR_Action_Boolean OpenHelperMode
+        {
+            get
+            {
+                return SteamVR_Actions.buggy_OpenHelperMode;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean CloseHelperMode
+        {
+            get
+            {
+                return SteamVR_Actions.buggy_CloseHelperMode;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean LiquidPump
+        {
+            get
+            {
+                return SteamVR_Actions.buggy_LiquidPump;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean LiquidRelease
+        {
+            get
+            {
+                return SteamVR_Actions.buggy_LiquidRelease;
+            }
+        }
     }
 }
