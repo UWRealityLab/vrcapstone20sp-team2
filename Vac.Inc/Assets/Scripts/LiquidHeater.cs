@@ -24,7 +24,7 @@ public class LiquidHeater : MonoBehaviour
     {
         RaycastHit hit;
         Ray ray = new Ray(transform.position, Vector3.up);
-        Physics.Raycast(ray, out hit, 0.15f);
+        Physics.Raycast(ray, out hit, 0.15f, 1 << 8);
         if (hit.collider && hit.collider.CompareTag("Beaker")) {
             LiquidFillManager beaker = hit.collider.gameObject.GetComponent<LiquidFillManager>();
             beaker.HeatLiquid();
