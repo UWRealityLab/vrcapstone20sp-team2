@@ -62,16 +62,18 @@ namespace Valve.VR.InteractionSystem
             float severity = liquid.virusSev;
             float score = similarity + reproducibility + (1 - severity * 2);
 
+
+
             Text component = display.GetComponent<Text>();
-            if (score >= 2.5f)
+            if (score >= 2.0f)
             {
                 component.color = Color.green;
-                component.text = "Your vaccine was proven very effective and in time. \n You saved the entire world!";
+                component.text = "Your vaccine sample proved to be very effective against the virus. \n You saved the entire world!";
             }
             else if (score >= 1.5f)
             {
                 component.color = Color.yellow;
-                component.text = "Your vaccine is somehow effective. \n You saved the most of the world!";
+                component.text = "Your vaccine is effective. \n You saved the most of the world!";
             }
             else
             {
