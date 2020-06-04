@@ -12,9 +12,11 @@ public class CanvasController : MonoBehaviour
 
   public SteamVR_Action_Boolean actionClose = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("default", "CloseHelperMode");
 
+  private SteamVR_Input_Sources LeftInputSource = SteamVR_Input_Sources.LeftHand;
+  private SteamVR_Input_Sources RightInputSource = SteamVR_Input_Sources.RightHand;
 
-  // Start is called before the first frame update
-  void Start()
+    // Start is called before the first frame update
+    void Start()
   {
 
   }
@@ -25,8 +27,8 @@ public class CanvasController : MonoBehaviour
       // Detect if release/pump is pressed.
       bool OpenHelperMode = false;
       bool CloseHelperMode = false;
-      OpenHelperMode = actionOpen.state;
-      CloseHelperMode = actionClose.state;
+      OpenHelperMode = actionOpen.state && !SteamVR_Input.GetState("buggy", "liquidPump", LeftInputSource) && !SteamVR_Input.GetState("buggy", "liquidPump", RightInputSource);
+      CloseHelperMode = actionClose.state && !SteamVR_Input.GetState("buggy", "liquidRelease", LeftInputSource) && !SteamVR_Input.GetState("buggy", "liquidRelease", RightInputSource);
       print("CloseHelperMode: " + CloseHelperMode);
       print("OpenHelperMode: " + OpenHelperMode);
       if (OpenHelperMode)

@@ -362,42 +362,6 @@
                },
                "mode" : "button",
                "path" : "/user/hand/right/input/b"
-            },
-            {
-               "inputs" : {
-                  "touch" : {
-                     "output" : "/actions/default/in/liquidpump"
-                  }
-               },
-               "mode" : "button",
-               "path" : "/user/hand/right/input/a"
-            },
-            {
-               "inputs" : {
-                  "touch" : {
-                     "output" : "/actions/default/in/liquidrelease"
-                  }
-               },
-               "mode" : "button",
-               "path" : "/user/hand/right/input/b"
-            },
-            {
-               "inputs" : {
-                  "touch" : {
-                     "output" : "/actions/default/in/liquidpump"
-                  }
-               },
-               "mode" : "button",
-               "path" : "/user/hand/left/input/x"
-            },
-            {
-               "inputs" : {
-                  "touch" : {
-                     "output" : "/actions/default/in/liquidrelease"
-                  }
-               },
-               "mode" : "button",
-               "path" : "/user/hand/left/input/y"
             }
          ]
       },
@@ -412,7 +376,7 @@
    "category" : "steamvr_input",
    "controller_type" : "oculus_touch",
    "description" : "",
-   "name" : "oculus_touch",
+   "name" : "My Vac.Inc [Testing] configuration for Oculus Touch",
    "options" : {},
    "simulated_actions" : []
 }

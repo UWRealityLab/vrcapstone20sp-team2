@@ -22,7 +22,7 @@ public class VT_controller : MonoBehaviour
             string newText = similarity + "\n" + reproducibility + "\n" + severity;
             Text component = display.GetComponent<Text>();
             component.text = newText;
-            if (score >= 2.5f)
+            if (score >= 2.0f)
             {
                 component.color = Color.green;
             } else if (score >= 1.5f)

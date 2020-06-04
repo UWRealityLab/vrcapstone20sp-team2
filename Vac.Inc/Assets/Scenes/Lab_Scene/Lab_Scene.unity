@@ -4791,6 +4791,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1747020906639541302, guid: 713dc50692e5b6443a0b80e40364062a,
+        type: 3}
+      propertyPath: actionPump.actionPath
+      value: /actions/buggy/in/LiquidPump
+      objectReference: {fileID: 0}
     - target: {fileID: 1747020907533859880, guid: 713dc50692e5b6443a0b80e40364062a,
         type: 3}
       propertyPath: m_Name
