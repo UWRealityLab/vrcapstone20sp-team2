@@ -51,7 +51,7 @@ namespace Valve.VR.InteractionSystem
                         float volume = liquid.GetVolume();
                         if (tubeCount == 1) {
                             tubeVolume = volume;
-                        } else if (Mathf.Abs(volume - tubeVolume) < 0.003f) {
+                        } else if (Mathf.Abs(volume - tubeVolume) > 0.003f) {
                             equalVolumes = false;
                         }
                     }
