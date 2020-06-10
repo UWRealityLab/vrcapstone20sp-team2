@@ -9,7 +9,7 @@ public class VT_tube_detect : MonoBehaviour
     public float severity;
     public LiquidFillManager liquid;
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Ctube")
         {
