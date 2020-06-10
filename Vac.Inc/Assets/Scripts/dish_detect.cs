@@ -6,7 +6,7 @@ public class dish_detect : MonoBehaviour
 {
   private LiquidFillManager liquid;
 
-  void OnTriggerEnter(Collider other)
+  void OnTriggerStay(Collider other)
   {
       if (other.gameObject.tag == "Beaker")
       {
