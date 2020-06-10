@@ -24662,8 +24662,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: -300}
-  m_SizeDelta: {x: 700, y: 600}
+  m_AnchoredPosition: {x: 5, y: -378}
+  m_SizeDelta: {x: 700, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1088315081291187453
 Canvas:
@@ -25570,7 +25570,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.36, y: 0.3947}
-  m_SizeDelta: {x: 720, y: 1200}
+  m_SizeDelta: {x: 720, y: 1300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1887111495031007786
 GameObject:
@@ -40843,7 +40843,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: 236}
+  m_AnchoredPosition: {x: 6, y: 288}
   m_SizeDelta: {x: 700, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5369724245947163480
@@ -40979,12 +40979,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: "Instructions:\r\n1. Pipette the virus out of the tube and into the beaker
-    with (2/3 blue + 1/3 green) chemicals.\r\n2. Turn on the bunsen burner by pressing
-    the red button on the side.\r\n3. Heat the chemical by putting it on the tripod.\r\n4.
-    Watch the liquid changing its color.\r\n5. Pipette the virus back to the tube.\r\nRefer
-    to the VT instructions after we\u2019ve done.\r\n\nRefer to the VT instructions
-    after we\u2019ve done.\r\n"
+  m_Text: "Instructions:\r\n1. Fill 2/3 of a beaker with blue chemical\n2. Pour green
+    chemical until the beaker is nearly full\n3. Pipette the virus out of the tube
+    and into the beaker.\n4. Turn on the bunsen burner by pressing the red button
+    on the side.\r\n5. Heat the chemical by putting it on the tripod.\r\n6. Watch
+    the liquid changing its color.\r\n7. Pipette the virus back to the tube.\r\nRefer
+    to the VT instructions after we\u2019ve done.\r\n"
 --- !u!114 &6078771789534609166
 MonoBehaviour:
   m_ObjectHideFlags: 0
