@@ -11682,9 +11682,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
   m_Text: "Instructions:\r\n1. Pipette the virus out and onto the petri dish.\r\n2.
-    Put the petri dish into the incubator, set a timer for it\r\n3. When the timer
-    is done, pick the dishes out and pipette back the virus into the tube\r\nRefer
-    to the VT instructions after we\u2019ve done.\r"
+    Put the petri dish into the incubator, leave it for 1 minute.\n3. When it is
+    done, pick the dishes out and pipette back the virus into the tube\r\nRefer to
+    the VT instructions after we\u2019ve done.\r"
 --- !u!222 &1178417798
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -29126,9 +29126,8 @@ MonoBehaviour:
   m_Text: "Instructions:\r\n1. Use the white button to open the lid.\r\n2. (Slowly)
     put EXACTLY 5 tubes with same amount of liquid into the inner circle of the centrifuge.\r\n3.
     Close the lid using the same white button.\r\n4. Press the green button to initiate
-    the spin.\r\n5. Wait for the spin to finish, and then press red to stop\n6. Open
-    the lid and pick the tubes out.\r\nRefer to the VT instructions after we\u2019ve
-    done.\r\n"
+    the spin.\r\n5. Wait for 1 minute, and then press red to stop\n6. Open the lid
+    and pick the tubes out.\r\nRefer to the VT instructions after we\u2019ve done.\r\n"
 --- !u!114 &2494304836111165652
 MonoBehaviour:
   m_ObjectHideFlags: 0
