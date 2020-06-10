@@ -198,9 +198,9 @@ public class LiquidFillManager : MonoBehaviour
           if (incubateTime < 59.5f) {
               incubateTime += Time.deltaTime;
           }
-          virusSim = (0.2432f * Mathf.Log(incubateTime + 1)) / 8;
-          virusSev = (-1.0f / 3600.0f * incubateTime * incubateTime + 1) / 8;
-          virusRep = (incubateTime / 60.0f) / 8;
+          virusSim = (0.2432f * Mathf.Log(incubateTime + 1));
+          virusSev = (-1.0f / 3600.0f * incubateTime * incubateTime + 1);
+          virusRep = (incubateTime / 60.0f);
           RoundVirus();
       }
     }
