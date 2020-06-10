@@ -12,7 +12,6 @@ public class dish_detect : MonoBehaviour
       {
           liquid = other.transform.gameObject.GetComponent<LiquidFillManager>();
           liquid.IncubateLiquid();
-          print("!!!!!!!!!");
       }
   }
 }
